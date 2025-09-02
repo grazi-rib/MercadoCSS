@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.topo {
+  background: #a9b2ad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b1d0f;
+}
+
+.menu-topo {
+  font-size: 14px;
+}
+
+.menu {
+  background: purple;
+  display: flex;
+  justify-content: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+}
+
+.menu a:hover {
+  background: #5a005a;
+}
