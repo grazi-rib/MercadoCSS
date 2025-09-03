@@ -61,7 +61,7 @@ nav a:active{
 }
 
 .descricao{
-    
+
 }
 
 .preco {
@@ -98,4 +98,7 @@ nav a:active{
     gap: 20px;           
     justify-content: center;
     padding: 60px;
+}
+.frios {
+    
 }
