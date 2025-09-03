@@ -59,3 +59,41 @@ nav a:hover{
 nav a:active{
     font-weight: bold;
 }
+
+.hortifruti{
+    font-weight: bold;
+}
+
+.produto-geral{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 60px;
+}
+.produto{
+    border: 1px solid #989696;
+    padding: 15px;
+    background-color: #f2f0ef;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-between;
+    gap: 20px;
+}
+.imagem{
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+.preco{
+    font-weight: bold;
+    color: #7B68EE;
+}
+.descricao{
+
+}
+.botao{
+    background-color: #7B68EE;
+    font-weight: bold;
+}
