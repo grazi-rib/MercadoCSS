@@ -1,16 +1,34 @@
+:root {
+    --branco: #f1f1f1;
+    --cinzagelo: #A6AEA8;
+    --preto: #000000;
+    --cinzaescuro: #393838;
+    --temapagina: #00A6A6;
+}
+
+#modo-escuro:checked ~ .paginacomp {
+    --branco: #121212;         
+    --cinzagelo: #444343;      
+    --preto: #e0e0e0;          
+    --cinzaescuro: #888888;    
+    --temapagina: #00CCCC;     
+
+}
+
 body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
+    background-color: var(--branco);
+    color: var(--preto);
 }
 
 header{
-    background-color: #A6AEA8;
+    background-color: var(--cinzagelo);
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--preto);
     height: 35px;
     justify-content: space-between;
 }
@@ -27,18 +45,18 @@ header{
 
 .menu-container  > a{
     font-size: 18px;
-    color: black;
+    color: var(--preto)
     font-weight: bold;
     margin-left: 20px;
     text-decoration: none;
 }
 
 .menu-container  > a:hover{
-    color: #393838;
+    color: var(--cinzaescuro);
 }
 
 nav{
-    background-color: #00A6A6;
+    background-color: var(--temapagina);
     padding: 10px 50px 10px 50px;
     align-items: center;
     justify-content: space-between;
@@ -47,7 +65,7 @@ nav{
 }
 
 nav a{
-    color: black;
+    color: var(--preto);
     text-decoration: none;
     font-size: 18px;
 }
@@ -62,31 +80,33 @@ nav a:active{
 
 .descricao{
     font-size: 16px;
+    color: var(--preto);
 }
 
 .preco {
     font-weight: bolder;
-    color: #00A6A6;
+    color: var(--temapagina);
     font-size: 24px;
 }
 
 .botao {
-    background-color: #00A6A6;
+    background-color: var(--temapagina);
     font-weight: bold;
     font-size: 20px;
 }
 
 .produto {
-    border: 1px solid #989696;
+    border: 1px solid var(--cinzagelo);
     padding: 10px;
-    background-color: #F2F0EF;
+    background-color: var(--branco);
+    color: var(--preto);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
     width: 180px;
-    box-shadow: 0 2px 4px black;
+    box-shadow: 0 2px 4px var(--preto);
 
 }
 
@@ -115,4 +135,17 @@ nav a:active{
 .botao-whats-img {
     width: 70px;
     height: 70px;
+}
+
+.html {
+    color-scheme: light dark;
+}
+
+.troca-tema {
+    cursor: pointer;
+    background-color: var(--temapagina);
+    color: var(--branco);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
 }

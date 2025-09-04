@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,111 +8,117 @@
     <title>MercadoCSS</title>
 </head>
 <body>
-    <header>
-        <img src="../assets/Untitled.png" alt="logo" class="logo">
-        <div class="menu-container">
-            <a href="about-us.html">Sobre nós</a>
-            <a href="checkout.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-            <a href="login.html">
-                <i class="fa-solid fa-user"></i>
-            </a>
+    <input type="checkbox" id="modo-escuro">
+    <label for="modo-escuro" class="troca-tema">Alternar Tema</label>
+    <div class="paginacomp">
+        <header>
+            <img src="../assets/Untitled.png" alt="logo" class="logo">
+            <div class="menu-container">
+                <a href="about-us.html">Sobre nós</a>
+                <a href="checkout.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </header>
+        <nav>
+            <a href="home.html">Inicio</a>
+            <a href="limpeza.html">Limpeza</a>
+            <a href="bebidas.html">Bebidas</a>
+            <a href="carnes.html">Carnes</a>
+            <a href="hortifruti.html">Hortifruti</a>
+            <a href="frios.html" class="frios">Frios</a>
+            <a href="padaria.html">Padaria</a>
+        </nav>
+        <div class="pagina-prod">
+            <div class="produtos-container">
+                <div class="produto">
+                    <img src="../assets/queijo.png" alt="foto de um queijo numa embalagem azul" class="imagem">
+                    <p class="descricao">Queijo Crioulo Mussarela Embalado 150g</p>
+                    <p class="preco">R$17,50</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/Presunto-Fatiado.png" alt="foto de um presunto fatiado numa embalagem amarela" class="imagem">
+                    <p class="descricao">Presunto Fatiado Pif Paf 150G</p>
+                    <p class="preco">R$ 12,99</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/iogurte.png" alt="foto de um iogurte grego de morango" class="imagem">
+                    <p class="descricao">Iogurte Grego Batavo Pedaços de Morango Pote 450g</p>
+                    <p class="preco">R$ 10,49</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/patefrango.png" alt="foto de uma embalagem de patê de frango" class="imagem">
+                    <p class="descricao">Patê De Frango 500g Cellier</p>
+                    <p class="preco">R$ 32,99</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/danoninho.png" alt="foto de uam embalagem de danoninho" class="imagem">
+                    <p class="descricao">Iogurte Integral Danoninho Bom Dia Morango c/ Aveia Pote 90g</p>
+                    <p class="preco">R$ 2,50</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/leite-integral-saquinho--pasteurizado.png" alt="foto de uma embalagem de leite" class="imagem">
+                    <p class="descricao">Leite Pasteurizado Integral Saquinho 1L Itambé</p>
+                    <p class="preco">R$ 6,49</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/nata.png" alt="foto de uma embalagem de nata" class="imagem">
+                    <p class="descricao">Nata Frimesa Pote 500g</p>
+                    <p class="preco">R$ 9,99</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/yakult.png" alt="foto de uma embalagem de yakult unitária" class="imagem">
+                    <p class="descricao">Leite Fermentado Yakult 80g</p>
+                    <p class="preco">R$ 3,55</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/requeijao.png" alt="foto de uma embalagem de requeijão" class="imagem">
+                    <p class="descricao">Requeijão Cremoso Vigor Light 200g</p>
+                    <p class="preco">R$ 6,99</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/manteiga.png" alt="foto de uma embalagem de manteiga" class="imagem">
+                    <p class="descricao">Manteiga Primeira Qualidade Itacolomy c/sal Pote 500gr</p>
+                    <p class="preco">R$ 25,35</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+            </div>
         </div>
-    </header>
-    <nav>
-        <a href="home.html">Inicio</a>
-        <a href="limpeza.html">Limpeza</a>
-        <a href="bebidas.html">Bebidas</a>
-        <a href="carnes.html">Carnes</a>
-        <a href="hortifruti.html">Hortifruti</a>
-        <a href="frios.html" class="frios">Frios</a>
-        <a href="padaria.html">Padaria</a>
-    </nav>
-    <div class="produtos-container">
-        <div class="produto">
-            <img src="../assets/queijo.png" alt="foto de um queijo numa embalagem azul" class="imagem">
-            <p class="descricao">Queijo Crioulo Mussarela Embalado 150g</p>
-            <p class="preco">R$17,50</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
-        <div class="produto">
-            <img src="../assets/Presunto-Fatiado.png" alt="foto de um presunto fatiado numa embalagem amarela" class="imagem">
-            <p class="descricao">Presunto Fatiado Pif Paf 150G</p>
-            <p class="preco">R$ 12,99</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
-         <div class="produto">
-            <img src="../assets/iogurte.png" alt="foto de um iogurte grego de morango" class="imagem">
-            <p class="descricao">Iogurte Grego Batavo Pedaços de Morango Pote 450g</p>
-            <p class="preco">R$ 10,49</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
-         <div class="produto">
-            <img src="../assets/patefrango.png" alt="foto de uma embalagem de patê de frango" class="imagem">
-            <p class="descricao">Patê De Frango 500g Cellier</p>
-            <p class="preco">R$ 32,99</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
-         <div class="produto">
-            <img src="../assets/danoninho.png" alt="foto de uam embalagem de danoninho" class="imagem">
-            <p class="descricao">Iogurte Integral Danoninho Bom Dia Morango c/ Aveia Pote 90g</p>
-            <p class="preco">R$ 2,50</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
-         <div class="produto">
-            <img src="../assets/leite-integral-saquinho--pasteurizado.png" alt="foto de uma embalagem de leite" class="imagem">
-            <p class="descricao">Leite Pasteurizado Integral Saquinho 1L Itambé</p>
-            <p class="preco">R$ 6,49</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
-         <div class="produto">
-            <img src="../assets/nata.png" alt="foto de uma embalagem de nata" class="imagem">
-            <p class="descricao">Nata Frimesa Pote 500g</p>
-            <p class="preco">R$ 9,99</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
-         <div class="produto">
-            <img src="../assets/yakult.png" alt="foto de uma embalagem de yakult unitária" class="imagem">
-            <p class="descricao">Leite Fermentado Yakult 80g</p>
-            <p class="preco">R$ 3,55</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
-         <div class="produto">
-            <img src="../assets/requeijao.png" alt="foto de uma embalagem de requeijão" class="imagem">
-            <p class="descricao">Requeijão Cremoso Vigor Light 200g</p>
-            <p class="preco">R$ 6,99</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
-         <div class="produto">
-            <img src="../assets/manteiga.png" alt="foto de uma embalagem de manteiga" class="imagem">
-            <p class="descricao">Manteiga Primeira Qualidade Itacolomy c/sal Pote 500gr</p>
-            <p class="preco">R$ 25,35</p>
-            <button class="botao">
-                <p>ADICIONAR</p>
-            </button>
-        </div>
+        <a href="contato.html" class="botao-whats">
+            <img src="../assets/whats.png" alt="Logotipo do Whatsapp Preto" class="botao-whats-img">
+        </a>
     </div>
-    <a href="contato.html" class="botao-whats">
-        <img src="../assets/whats.png" alt="Logotipo do Whatsapp Preto" class="botao-whats-img">
-    </a>
 </body>
 </html>
