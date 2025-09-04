@@ -97,3 +97,13 @@ nav a:active{
     background-color: #7B68EE;
     font-weight: bold;
 }
+.botao-whats{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.botao-whats-img{
+    width: 70px;
+    height: 70px;
+}
