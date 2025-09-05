@@ -1,16 +1,24 @@
+:root{
+    --branco: #f1f1f1;
+    --cinzaclaro: #A6AEA8;
+    --preto: #000000;
+    --cinzamedio: #393838;
+    --azulbebe: #87cefa;
+}
+
 body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
+    background-color: var(--branco)
 }
 
 header{
-    background-color: #A6AEA8;
+    background-color: var(--cinzaclaro);
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--preto);
     height: 35px;
     justify-content: space-between;
 }
@@ -27,18 +35,18 @@ header{
 
 .menu-container  > a{
     font-size: 18px;
-    color: black;
+    color: var(--preto);
     font-weight: bold;
     margin-left: 20px;
     text-decoration: none;
 }
 
 .menu-container  > a:hover{
-    color: #393838;
+    color: var(--cinzamedio);
 }
 
 nav{
-    background-color: #87cefa;
+    background-color: var(--azulbebe);
     padding: 10px 50px 10px 50px;
     align-items: center;
     justify-content: space-between;
@@ -47,7 +55,7 @@ nav{
 }
 
 nav a{
-    color: black;
+    color: var(--preto);
     text-decoration: none;
     font-size: 18px;
 }
