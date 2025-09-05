@@ -1,16 +1,27 @@
-body{
+:root{
+    --branco: #f1f1f1;
+    --cinza: #A6AEA8;
+    --preto: #000000;
+    --cinzaesc: #393838;
+    --roxo: #9370DB;
+    --cinzaclaro: #989696;
+    --off: #f2f0ef;
+    --lilas: #7B68EE;
+}
+    
+    body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
+    background-color: var(--branco);
 }
 
 header{
-    background-color: #A6AEA8;
+    background-color: var(--cinza);
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--preto);
     height: 35px;
     justify-content: space-between;
 }
@@ -27,18 +38,18 @@ header{
 
 .menu-container  > a{
     font-size: 18px;
-    color: black;
+    color: var(--preto);
     font-weight: bold;
     margin-left: 20px;
     text-decoration: none;
 }
 
 .menu-container  > a:hover{
-    color: #393838;
+    color: var(--cinzaesc);
 }
 
 nav{
-    background-color: #9370DB;
+    background-color: var(--roxo);
     padding: 10px 50px 10px 50px;
     align-items: center;
     justify-content: space-between;
@@ -47,7 +58,7 @@ nav{
 }
 
 nav a{
-    color: black;
+    color: var(--preto);
     text-decoration: none;
     font-size: 18px;
 }
@@ -72,9 +83,9 @@ nav a:active{
     padding: 60px;
 }
 .produto{
-    border: 1px solid #989696;
+    border: 1px solid var(--cinzaclaro);
     padding: 15px;
-    background-color: #f2f0ef;
+    background-color: var(--off);
     text-align: center;
     display: grid;
     grid-template-columns: auto;
@@ -88,13 +99,14 @@ nav a:active{
 }
 .preco{
     font-weight: bold;
-    color: #7B68EE;
+    color: var(--lilas);
 }
 .descricao{
-
+    font-size: 16px;
+    color: var(--preto);
 }
 .botao{
-    background-color: #7B68EE;
+    background-color: var(--lilas);
     font-weight: bold;
 }
 .botao-whats{
