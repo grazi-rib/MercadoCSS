@@ -62,18 +62,24 @@ nav a:active{
 
 .produtos{
     display: grid;
-    grid-template-columns: 100px 100px;
+    grid-template-columns: 250px 250px 250px 250px  250px;
+    justify-content: center;
+    align-items: center;
     column-gap: 30px;
     row-gap: 20px;
 }
 main{
     display: flex;
+    justify-content: center;
 }
+
 .card{
     width: 300px;
     padding: 10px;
     display: flex;
+    border: 2px solid #ccc;
+    border-radius: 8px;
 }
 .card > img{
-    width: 200px;
+    width: 100px;
 }
