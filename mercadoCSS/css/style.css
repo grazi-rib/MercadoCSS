@@ -59,3 +59,7 @@ nav a:hover{
 nav a:active{
     font-weight: bold;
 }
+main{
+    display: block;
+    width: 100%;
+}
