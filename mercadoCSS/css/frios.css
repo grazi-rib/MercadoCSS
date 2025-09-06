@@ -122,6 +122,7 @@ nav a:active{
     gap: 20px;           
     justify-content: center;
     padding: 60px;
+    background-color: var(--branco);
 }
 .frios {
     font-weight: bolder;  
@@ -132,13 +133,10 @@ nav a:active{
     right: 20px;        
     z-index: 1000;      
 }
+
 .botao-whats-img {
     width: 70px;
     height: 70px;
-}
-
-.html {
-    color-scheme: light dark;
 }
 
 .troca-tema {
