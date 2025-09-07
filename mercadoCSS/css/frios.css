@@ -45,7 +45,7 @@ header{
 
 .menu-container  > a{
     font-size: 18px;
-    color: var(--preto)
+    color: var(--preto);
     font-weight: bold;
     margin-left: 20px;
     text-decoration: none;
@@ -146,4 +146,76 @@ nav a:active{
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 14px;
+}
+
+/* compatibilidadeComCelulares */
+
+@media (max-width: 480px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .menu-container > a {
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .produtos-container {
+    padding: 20px;
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .produto {
+    flex: 0 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    margin-bottom: 15px;
+  }
+
+  .imagem {
+    max-width: 100%;
+  }
+
+  .botao-whats-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .troca-tema {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .preco {
+    font-size: 20px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
 }
