@@ -8,64 +8,79 @@
     <title>MercadoCSS</title>
 </head>
 <body>
-    <header>
-        <img src="../assets/Untitled.png" alt="logo" class="logo">
-        <div class="menu-container">
-            <a href="about-us.html">Sobre nós</a>
-            <a href="checkout.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-            <a href="login.html">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
-    </header>
-    <nav>
-        <a href="home.html">Inicio</a>
-        <a href="limpeza.html">Limpeza</a>
-        <a href="bebidas.html">Bebidas</a>
-        <a href="carnes.html">Carnes</a>
-        <a href="hortifruti.html">Hortifruti</a>
-        <a href="frios.html">Frios</a>
-        <a href="padaria.html">Padaria</a>
-    </nav>
-    <div class="geral">
+    <input type="checkbox" id="modo-escuro">
+    <div class="paginacomp">
+        <header>
+            <div class="iconeemodoescuro">
+                <img src="../assets/Untitled.png" alt="logo" class="logo">
+                <label for="modo-escuro" class="troca-tema">Alternar Tema</label>
+            </div>
+            <div class="menu-container">
+                <a href="about-us.html">Sobre nós</a>
+                <a href="checkout.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </header>
+        <nav>
+            <a href="home.html">Inicio</a>
+            <a href="limpeza.html">Limpeza</a>
+            <a href="bebidas.html">Bebidas</a>
+            <a href="carnes.html">Carnes</a>
+            <a href="hortifruti.html">Hortifruti</a>
+            <a href="frios.html">Frios</a>
+            <a href="padaria.html">Padaria</a>
+        </nav>
+<div class="geral">
         <div class="pagamento">
-        <h1 class="titulo"> Escolha uma forma de pagamento </h1>
-        <img src="../assets/cards.png" alt="Bandeira de Cartões de Pagamento" >
-        <img src="../assets/Cartão.png" alt="Ícone Cartão de Crédito" >
-        <p>Cartão de Crédito/Débito</p>
-        <img src="../assets/Pix.png" alt="Ícone do Pix" >
-        <p>PIX</p>
-        <img src="../assets/Boleto.png" >
-        <p>Boleto</p>
-        <label for="number">Número do Cartão</label>
-        <input type="text" id="number" placeholder="Ex: XXXX-XXXX-XXXX-XXXX">
-        <label for="expiry">Vencimento</label>
-        <input type="text" id="expiry" placeholder="Ex: 08/25">
-        <label for="CVV">CVV</label>
-        <input type="text" id="CVV" placeholder="Ex: 123">
+                <h1 class="titulo"> Escolha uma forma de pagamento </h1>
+                <img src="../assets/cards.png" alt="Bandeira de Cartões de Pagamento" >
+                <img src="../assets/Cartão.png" alt="Ícone Cartão de Crédito" >
+                <p>Cartão de Crédito/Débito</p>
+                <img src="../assets/Pix.png" alt="Ícone do Pix" >
+                <p>PIX</p>
+                <img src="../assets/Boleto.png" >
+                <p>Boleto</p>
+            <div class="formspagamento">
+                <label for="number">Número do Cartão</label>
+                <input type="text" id="number" placeholder="Ex: XXXX-XXXX-XXXX-XXXX">
+                <label for="expiry">Vencimento</label>
+                <input type="text" id="expiry" placeholder="Ex: 08/25">
+                <label for="CVV">CVV</label>
+                <input type="text" id="CVV" placeholder="Ex: 123">
+            </div>
         </div>
-        <div class="Info">
-        <h2 class="titulo"> Informações do Comprador</h2>
-        <label for="firstname">Primeiro Nome</label>
-        <input type="text" id="firstname" placeholder="Ex: Pablo">
-        <label for="secondname">Segundo Nome</label>
-        <input type="text" id="secondname" placeholder="Ex: Matheus">
-        <label for="andress">Endereço</label>
-        <input type="text" id="andress" placeholder="Ex: Rua Emílio Neves">
-        <label for="andressnumber">Número</label>
-        <input type="text" id="andressnumber" placeholder="Ex: 6954">
-        <label for="estado">Estado</label>
-        <input type="text" id="estado" placeholder="Ex: São Paulo ">
-        <label for="cidade">Cidade</label>
-        <input type="text" id="cidade" placeholder="Ex: São Paulo">
-        <p>CONFIRMAR</p>
-        </div>
+    <div class="Info">
+                <h2 class="titulo"> Informações do Comprador</h2>
+            <div class="formsinfo">
+                <label for="firstname">Primeiro Nome</label>
+                <input type="text" id="firstname" placeholder="Ex: Pablo">
+                <label for="secondname">Segundo Nome</label>
+                <input type="text" id="secondname" placeholder="Ex: Matheus">
+                <label for="andress">Endereço</label>
+                <input type="text" id="andress" placeholder="Ex: Rua Emílio Neves">
+                <label for="andressnumber">Número</label>
+                <input type="text" id="andressnumber" placeholder="Ex: 6954">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" placeholder="Ex: São Paulo ">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" placeholder="Ex: São Paulo">
+            </div>
+        <button class="botao">
+            <p>CONFIRMAR</p>
+        </button>
     </div>
+</div>
     <a href="contato.html" class="botao-whats">
-            <img src="../assets/whats.png" alt="Logo do WhatsApp" class="botao-whats-img" >
+            <img src="../assets/whatsapp.png" alt="Logo do WhatsApp" class="botao-whats-img" >
     </a>
-
+    <footer>
+        <div class="final">
+            <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
