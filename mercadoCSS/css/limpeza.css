@@ -32,6 +32,8 @@
     background-color: var(--branco);
 }
 
+
+
 header{
     background-color: var(--cinza);
     padding: 10px 20px;
@@ -108,6 +110,29 @@ nav a:active{
     justify-content: space-between;
     gap: 20px;
 }
+
+h1 {
+    font-family: 'Arial', sans-serif; 
+    font-size: clamp(1.8rem, 6vw, 2.5rem);              
+    color: var(--temapagina);        
+    text-align: center;              
+    margin: 20px 0 10px 0;         
+    text-transform: uppercase;       
+    letter-spacing: 2px;             
+    position: relative;              
+    padding-bottom: 15px;            
+}
+
+h1::after {
+    content: '';                     
+    display: block;
+    width: clamp(30px, 10vw, 50px);                     
+    height: 4px;                     
+    background-color: var(--temapagina); 
+    margin: 8px auto 0 auto;         
+    border-radius: 2px;              
+}
+
 .imagem{
     max-width: 200px;
     height: auto;
@@ -188,4 +213,8 @@ nav a:active{
 .accordion-total input:checked ~ .accordion-texto {
   max-height: 200px;
   padding: 10px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
