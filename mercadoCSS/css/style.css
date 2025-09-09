@@ -13,16 +13,40 @@ header{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     height: 35px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .logo{
     height: 50px;
+    transform: translateY(-5px);
 }
 
 .menu-container{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+    .logo {
+        height: 40px;
+        margin-bottom: 8px;
+    }
+    .menu-container {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 8px;
+    }
+    .menu-container > a {
+        margin-left: 0;
+        font-size: 16px;
+    }
 }
 
 .menu-container  > a{
@@ -58,4 +82,28 @@ nav a:hover{
 
 nav a:active{
     font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 10px 10px;
+        gap: 8px;
+    }
+    nav a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 5px;
+        gap: 5px;
+    }
+    nav a {
+        font-size: 15px;
+        text-align: center;
+    }
 }
