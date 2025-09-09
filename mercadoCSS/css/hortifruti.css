@@ -11,6 +11,7 @@
     --temapagina: #9370DB;
     --hovernav: #393838;
 }
+
 #modo-escuro:checked ~ .paginacomp {
     --branco: #000000;
     --cinzaclaro: #1E1E1E;
