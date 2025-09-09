@@ -83,27 +83,3 @@ nav a:hover{
 nav a:active{
     font-weight: bold;
 }
-
-@media (max-width: 900px) {
-    nav {
-        flex-wrap: wrap;
-        padding: 10px 10px;
-        gap: 8px;
-    }
-    nav a {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 10px 5px;
-        gap: 5px;
-    }
-    nav a {
-        font-size: 15px;
-        text-align: center;
-    }
-}
