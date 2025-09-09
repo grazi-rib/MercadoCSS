@@ -20,7 +20,7 @@ header{
 }
 
 .menu-container{
-    display: flex;
+    display: center;
     align-items: center;
     gap: 20px;
 }
@@ -58,8 +58,4 @@ nav a:hover{
 
 nav a:active{
     font-weight: bold;
-}
-main{
-    display: block;
-    width: 100%;
 }
