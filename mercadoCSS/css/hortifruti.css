@@ -377,6 +377,43 @@ h1::after {
 #modo-escuro {
     display: none;
 }
+.faq {
+    font-family: 'Arial', sans-serif; 
+    font-size: clamp(1rem, 3vw, 1.2rem);              
+    color: var(--temapagina);        
+    text-align: center;              
+    margin: 20px 0 10px 0;                   
+    padding-bottom: 15px;
+  }
+  
+  .accordion-total input {
+    display: none;
+  }
+  
+  .accordion-total label {
+    display: block;
+    background-color: var(--temapagina);
+    color: var(--preto);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .accordion-texto {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--cinzagelo);
+    color: var(--preto);
+    padding: 0 10px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+  
+  .accordion-total input:checked ~ .accordion-texto {
+    max-height: 200px;
+    padding: 10px;
+  }
 
 .faq {
     font-family: 'Arial', sans-serif; 
@@ -433,7 +470,6 @@ footer {
     gap: 8px;
     align-items: center;
 }
-
 .hortifruti{
     font-weight: bold;
 }

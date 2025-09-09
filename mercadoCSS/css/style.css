@@ -20,7 +20,7 @@ header{
 }
 
 .menu-container{
-    display: flex;
+    display: center;
     align-items: center;
     gap: 20px;
 }
@@ -41,9 +41,10 @@ nav{
     background-color: #FF8652;
     padding: 10px 50px 10px 50px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
-    gap: 15px;
+    gap: 110px;
+    overflow-x: auto;
 }
 
 nav a{
