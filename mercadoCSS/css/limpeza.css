@@ -3,36 +3,33 @@
     --cinza: #A6AEA8;
     --preto: #000000;
     --cinzaesc: #393838;
-    --roxo: #9370DB;
+    --roxo: #87CEFA;
     --cinzaclaro: #989696;
     --off: #f2f0ef;
-    --lilas: #7B68EE;
-    --cinzaescuro: #A6AEA8;
-    --temapagina: #9370DB;
-    --hovernav: #393838;
+    --lilas: #87CEFA;
+
+    --cinzagelo: #1E1E1E;
+    --preto: #E5E5E5;
+    --cinzaescuro: #B0B0B0;
+    --temapagina: #87CEFA;
+    --hovernav: #333333;
+
 }
 
 #modo-escuro:checked ~ .paginacomp {
-    --branco: #000000;
-    --cinzaclaro: #1E1E1E;
+    --branco: #121212;
+    --cinzagelo: #1E1E1E;
     --preto: #E5E5E5;
     --cinzaescuro: #B0B0B0;
-    --temapagina: #9370DB;
-    --hovernav: #393838;
-    --off: #121212;
-  }
-  .paginacomp {
-    background-color: var(--branco);
-    transition: background-color 0.3s ease;
-  }
-  #modo-escuro:checked ~ .paginacomp {
-    background-color: #000000;
-  }
+    --temapagina: #87CEFA;
+    --hovernav: #333333;
+}
     
-body{
+    body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--branco);
 }
 
 header{
@@ -53,7 +50,6 @@ header{
     display: flex;
     align-items: center;
     gap: 20px;
-    color: var(--hovernav);
 }
 
 .menu-container  > a{
@@ -91,7 +87,7 @@ nav a:active{
     font-weight: bold;
 }
 
-.hortifruti{
+.limpeza{
     font-weight: bold;
 }
 
@@ -123,7 +119,6 @@ nav a:active{
 }
 .descricao{
     font-size: 16px;
-    color: var(--preto);
 }
 .botao{
     background-color: var(--lilas);
@@ -139,82 +134,58 @@ nav a:active{
     width: 70px;
     height: 70px;
 }
-.troca-tema {
-    padding: 5px 10px;
-    font-size: 12px;
-    margin-left: 10px;
-    margin-right: auto;
-}
+
 .troca-tema {
     position: static; 
     margin: 0 20px;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
     cursor: pointer;
     background-color: var(--temapagina);
     color: var(--preto);
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 14px;
-    z-index: 1000;
 }
 
 #modo-escuro {
     display: none;
 }
 .faq {
-    font-family: 'Arial', sans-serif; 
-    font-size: clamp(1rem, 3vw, 1.2rem);              
-    color: var(--temapagina);        
-    text-align: center;              
-    margin: 20px 0 10px 0;                   
-    padding-bottom: 15px;
-  }
-  
-  .accordion-total input {
-    display: none;
-  }
-  
-  .accordion-total label {
-    display: block;
-    background-color: var(--temapagina);
-    color: var(--preto);
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-bottom: 5px;
-  }
-  
-  .accordion-texto {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: var(--cinzagelo);
-    color: var(--preto);
-    padding: 0 10px;
-    font-size: clamp(0.8rem, 2vw, 1rem);
-  }
-  
-  .accordion-total input:checked ~ .accordion-texto {
-    max-height: 200px;
-    padding: 10px;
-  }
-
-footer {
-    background-color: var(--cinzaescuro);
-    color: var(--preto);
-    padding: 10px 0;
-    text-align: center;
-    font-size: 14px;
+  font-family: 'Arial', sans-serif; 
+  font-size: clamp(1rem, 3vw, 1.2rem);              
+  color: var(--temapagina);        
+  text-align: center;              
+  margin: 20px 0 10px 0;                   
+  padding-bottom: 15px;
 }
 
-.final {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
+.accordion-total input {
+  display: none;
 }
-.hortifruti{
-    font-weight: bold;
+
+.accordion-total label {
+  display: block;
+  background-color: var(--temapagina);
+  color: var(--preto);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.accordion-texto {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: var(--cinzagelo);
+  color: var(--preto);
+  padding: 0 10px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.accordion-total input:checked ~ .accordion-texto {
+  max-height: 200px;
+  padding: 10px;
 }
