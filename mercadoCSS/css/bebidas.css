@@ -1,21 +1,21 @@
 .produtos{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    justify-content: center;
-    align-items:center;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 auto;
     gap: 20px;
     padding: 20px;
+    max-width: 1200px;
 }
 
 .produtos > div{
-    width: fit-content;
-    max-height: fit-content;
     padding: 15px;
+    border: 1px solid #ddd;
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
     justify-content: center;
+    transition: transform 0.2s;
 }
 
 .preco {
@@ -27,12 +27,8 @@
 }
 
 div > img{
-    width: 100%;
     max-width: 100%;
-    margin: 8px 10px 8px 10px;
-    height: auto;
-    display: block;
-    border-radius: 4px;
+    height: 120px;
     object-fit: contain;
 }
 
