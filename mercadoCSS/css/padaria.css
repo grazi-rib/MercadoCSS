@@ -31,4 +31,5 @@
     display: block;
     margin: 8px 10px 8px 10px;
     border-radius: 4px;
+    object-fit: contain;
 }
