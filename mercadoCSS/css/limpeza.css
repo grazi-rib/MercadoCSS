@@ -1,20 +1,23 @@
 :root{
     --branco: #f1f1f1;
-    --cinzaclaro: #A6AEA8;
+    --cinza: #A6AEA8;
     --preto: #000000;
-    --cinzamedio: #393838;
-    --azulbebe: #87cefa;
+    --cinzaesc: #393838;
+    --roxo: #87CEFA;
+    --cinzaclaro: #989696;
+    --off: #f2f0ef;
+    --lilas: #87CEFA;
 }
-
-body{
+    
+    body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--branco)
+    background-color: var(--branco);
 }
 
 header{
-    background-color: var(--cinzaclaro);
+    background-color: var(--cinza);
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -42,11 +45,11 @@ header{
 }
 
 .menu-container  > a:hover{
-    color: var(--cinzamedio);
+    color: var(--cinzaesc);
 }
 
 nav{
-    background-color: var(--azulbebe);
+    background-color: var(--roxo);
     padding: 10px 50px 10px 50px;
     align-items: center;
     justify-content: space-between;
@@ -66,4 +69,53 @@ nav a:hover{
 
 nav a:active{
     font-weight: bold;
+}
+
+.hortifruti{
+    font-weight: bold;
+}
+
+.produto-geral{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 60px;
+}
+.produto{
+    border: 1px solid var(--cinzaclaro);
+    padding: 15px;
+    background-color: var(--off);
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-between;
+    gap: 20px;
+}
+.imagem{
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+.preco{
+    font-weight: bold;
+    color: var(--lilas);
+}
+.descricao{
+    font-size: 16px;
+    color: var(--preto);
+}
+.botao{
+    background-color: var(--lilas);
+    font-weight: bold;
+}
+.botao-whats{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.botao-whats-img{
+    width: 70px;
+    height: 70px;
 }
