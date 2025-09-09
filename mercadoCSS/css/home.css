@@ -134,7 +134,7 @@ body {
 .paginacomp {
     background-color: var(--cor-fundo);
     min-height: 100vh;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
 }
 .troca-tema {
     position: static;
@@ -155,7 +155,6 @@ body {
 footer {
     background-color: var(--cor-footer-bg);
     color: var(--cor-footer-texto);
-    padding: 10px 0;
     text-align: center;
     font-size: 14px;
 }
@@ -167,4 +166,194 @@ footer {
     flex-direction: column;
     gap: 8px;
     align-items: center;
+}
+#inicio{
+    font-weight: bold;
+}
+
+@media print {
+  body {
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+  }
+  nav, .botao-produto, .menu-container {
+    display: none;
+  }
+  .produto {
+    page-break-inside: avoid;
+    border: 1px solid var(--cor-borda);
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--cor-card);
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: var(--cor-borda);
+  }
+
+  .accordion-texto {
+    max-height: none !important; 
+    padding: 10px !important;
+    display: block !important;
+    color: var(--cor-texto);
+    background: var(--cor-card);
+  }
+
+  .accordion-total label::after {
+    content: "";
+  }
+  
+}
+
+@media (max-width: 480px) {
+
+  header { 
+    gap: 10px;
+    height: auto;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .menu-container {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;  
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .menu-container > a {
+    margin-left: 0;
+    color: var(--cor-menu-link);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .iconeemodoescuro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px; 
+    gap: 10px; 
+    align-items: center;
+  }
+
+  nav a {
+    width: auto; 
+    text-align: center;
+    padding: 10px 0;
+    color: var(--cor-menu-link);
+    text-decoration: none;
+  }
+
+  .produtos-container {
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .produto {
+    flex: 1 1 150px;
+    max-width: 200px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .titulo-sessao {         
+    margin: 20px 0 15px 0;
+    letter-spacing: 1.5px;
+    padding-bottom: 12px;
+  }
+
+  .titulo-sessao::after {
+    content: "";
+    display: block;
+    width: 40px;              
+    height: 3px;
+    margin: 6px auto 0 auto;
+    background-color: var(--cor-tema);
+  }
+
+  .imagem-produto {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .botao-produto {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .troca-tema {
+    padding: 5px 10px;
+  }
+
+  footer .final {
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  header {
+    padding: 5px 10px;
+    gap: 5px;
+  }
+
+  .logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .troca-tema {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  .menu-container {
+    gap: 5px;     
+  }
+
+  .botao-produto {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .titulo-sessao {     
+    margin: 15px 0 10px 0;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+  }
+
+  .titulo-sessao::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto 0 auto;
+    background-color: var(--cor-tema);
+  }
 }
