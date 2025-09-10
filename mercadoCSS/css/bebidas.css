@@ -1,3 +1,113 @@
+:root{
+  --branco: #f1f1f1;
+  --cinza: #A6AEA8;
+  --preto: #000000;
+  --cinzaesc: #393838;
+  --limao: #D6DD0F;
+  --cinzaclaro: #989696;
+  --off: #f2f0ef;
+  --limon: #c6cc16;
+  --cinzaescuro: #A6AEA8;
+  --temapagina: #D6DD0F;
+  --hovernav: #393838;
+}
+
+#modo-escuro:checked ~ .paginacomp {
+  --branco: #000000;
+  --cinzaclaro: #1E1E1E;
+  --preto: #E5E5E5;
+  --cinzaescuro: #B0B0B0;
+  --temapagina: #D6DD0F;
+  --hovernav: #393838;
+  --off: #121212;
+}
+
+@media (max-width: 360px) {
+  header {
+    padding: 5px 10px;
+    gap: 5px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .troca-tema {
+    padding: 3px 6px;
+  }
+
+  .menu-container {
+    gap: 5px;     
+  }
+
+  .botao-whats-img {
+    width: 45px;   
+    height: auto; 
+    max-height: 50px;
+  }
+
+  h1 {     
+    margin: 15px 0 10px 0;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+  }
+
+  h1::after {
+    width: 30px;
+    height: 3px;
+    margin: 5px auto 0 auto;
+  }
+}
+
+.paginacomp {
+  background-color: var(--branco);
+  transition: background-color 0.3s ease;
+}
+
+#modo-escuro:checked ~ .paginacomp {
+  background-color: #222222;
+}
+
+h1 {
+  font-family: 'Arial', sans-serif; 
+  font-size: clamp(1.8rem, 6vw, 2.5rem);              
+  color: #D6DD0F;        
+  text-align: center;              
+  margin: 20px 0 10px 0;         
+  text-transform: uppercase;       
+  letter-spacing: 2px;             
+  position: relative;              
+  padding-bottom: 15px;            
+}
+
+h1::after {
+  content: '';                     
+  display: block;
+  width: clamp(30px, 10vw, 50px);                     
+  height: 4px;                     
+  background-color: #D6DD0F; 
+  margin: 8px auto 0 auto;         
+  border-radius: 2px;              
+}
+
+.troca-tema {
+  position: static; 
+  margin: 0 20px;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  cursor: pointer;
+  background-color: var(--temapagina);
+  color: var(--preto);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#modo-escuro {
+  display: none;
+}
+
 .produtos{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -47,7 +157,6 @@
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
-    max-width: 180px;
 }
 @media (max-width: 1024px) {
     .produtos {
