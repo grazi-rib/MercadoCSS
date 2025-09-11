@@ -5,19 +5,35 @@
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
-}
+    color: var(--preto);
 
+}
 .produtos > .card{
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--off);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
     justify-content: center;
     transition: transform 0.2s;
 }
-
+#modo-escuro:checked ~ .paginacomp {
+    --branco: #000000;
+    --cinzaclaro: #1E1E1E;
+    --preto: #E5E5E5;
+    --cinzaescuro: #B0B0B0;
+    --temapagina: #D6DD0F;
+    --hovernav: #393838;
+    --off: #121212;
+  }
+  .paginacomp {
+    background-color: var(--branco);
+    transition: background-color 0.3s ease;
+  }
+  #modo-escuro:checked ~ .paginacomp {
+    background-color: #000000;
+  }
 .preco {
     color: #D6DD0F;
     font-weight: bold;
