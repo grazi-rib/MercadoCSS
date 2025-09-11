@@ -8,106 +8,137 @@
     <title>MercadoCSS</title>
 </head>
 <body>
-    <header>      
-        <img src="../assets/Untitled.png" alt="logo" class="logo">
-        <div class="menu-superior">
-            <a href="about-us.html">Sobre nós</a>
-            <a href="checkout.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-            <a href="login.html">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
-    </header>
+    <input type="checkbox" id="modo-escuro">
+    <div class="paginacomp">
+        <header>
+            <div class="iconeemodoescuro">
+                <img src="../assets/Untitled.png" alt="logo" class="logo">
+                <label for="modo-escuro" class="troca-tema">Alternar Tema</label>
+            </div>
+            <div class="menu-container">
+                <a href="about-us.html" aria-label="Login do usuário">Sobre nós</a>
+                <a href="checkout.html" aria-label="Carrinho de compras">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </header>
     <nav>
         <a href="home.html">Inicio</a>
         <a href="limpeza.html">Limpeza</a>
         <a href="bebidas.html">Bebidas</a>
-        <a href="carnes.html" style="font-weight: bold;">Carnes</a>
+        <a href="carnes.html" class="carnes">Carnes</a>
         <a href="hortifruti.html">Hortifruti</a>
         <a href="frios.html">Frios</a>
         <a href="padaria.html">Padaria</a>
     </nav>
-    <section class="produtos">
-    <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.VX16RGSHfTYylCk7uBoydAHaE8?w=284&h=189&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Alcatra Bovina Miolo (Opção Iscas)">
-      <h3>Alcatra Bovina Miolo (Opção Iscas) Kg</h3>
-      <p class="preco">R$ 64,90</p>
-      <button class="btn">ADICIONAR</button>
-    </div>
+    <main>
+      <h1>Carnes</h1>
+      <section class="produto-geral">
+      <div class="produto">
+        <img src="../assets/alcatra.png" alt="Alcatra Bovina Miolo (Opção Iscas)" class="imagem">
+        <h3 class="descricao">Alcatra Bovina Miolo (Opção Iscas) Kg</h3>
+        <p class="preco">R$ 64,90</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
 
-    <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.JL_RJx2KcDVLSttXW7cdeQHaHa?w=187&h=187&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Costela Bovina Kroth Desossada">
-      <h3>Costela Bovina Kroth Desossada Kg</h3>
-      <p class="preco">R$ 37,99</p>
-      <button class="btn">ADICIONAR</button>
-    </div>
+      <div class="produto">
+        <img src="../assets/costela.png" alt="Costela Bovina Kroth Desossada" class="imagem">
+        <h3 class="descricao">Costela Bovina Kroth Desossada Kg</h3>
+        <p class="preco">R$ 37,99</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
 
-    <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.jC8ab2tUWHheuS_Pawz-7AHaHa?w=220&h=220&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Costela Bovina Ripa">
-      <h3>Costela Bovina Ripa Kg</h3>
-      <p class="preco">R$ 23,79</p>
-      <button class="btn">ADICIONAR</button>
-    </div>
+      <div class="produto">
+        <img src="../assets/costelaripa.png" alt="Costela Bovina Ripa" class="imagem">
+        <h3 class="descricao">Costela Bovina Ripa Kg</h3>
+        <p class="preco">R$ 23,79</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
 
-    <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.fxJz2XZGyF-pIe1PAMdwrAHaHa?w=209&h=209&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Contra Filé Bovino Familiar">
-      <h3>Contra Filé Bovino Familiar Kg</h3>
-      <p class="preco">R$ 64,99</p>
-      <button class="btn">ADICIONAR</button>
-    </div>
+      <div class="produto">
+        <img src="../assets/contrafile.png" alt="Contra Filé Bovino Familiar" class="imagem">
+        <h3 class="descricao">Contra Filé Bovino Familiar Kg</h3>
+        <p class="preco">R$ 64,99</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
 
-    <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.s4EfSN91qE5Ma-8iMgbaXAHaHa?w=163&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Contra Filé Bovino À Vácuo">
-      <h3>Contra Filé Bovino À Vácuo Kg</h3>
-      <p class="preco">R$ 79,90</p>
-      <button class="btn">ADICIONAR</button>
-    </div>
+      <div class="produto">
+        <img src="../assets/contrafilevacuo.png" alt="Contra Filé Bovino À Vácuo" class="imagem">
+        <h3 class="descricao">Contra Filé Bovino À Vácuo Kg</h3>
+        <p class="preco">R$ 79,90</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
 
-    <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.ATajkdu-FKcJRtRdqLBj5gHaHa?w=172&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Bife de Chorizo Swift Wagyu">
-      <h3>Bife de Chorizo Swift Wagyu Kg</h3>
-      <p class="preco">R$ 454,90</p>
-      <button class="btn">ADICIONAR</button>
-    </div>
+      <div class="produto">
+        <img src="../assets/chorizo.png" alt="Bife de Chorizo Swift Wagyu" class="imagem">
+        <h3 class="descricao">Bife de Chorizo Swift Wagyu Kg</h3>
+        <p class="preco">R$ 454,90</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
 
-    <div class="card">
-      <img src="https://thvnext.bing.com/th/id/OIP.3AQzRylFFA_-n8Pv5jyu7gHaE8?w=273&h=182&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Corte de Carne Tomahawk">
-      <h3>Corte de Carne Tomahawk</h3>
-      <p class="preco">R$ 250,99</p>
-      <button class="btn">ADICIONAR</button>
-    </div>
+      <div class="produto">
+        <img src="../assets/tomahawk.png" alt="Corte de Carne Tomahawk" class="imagem">
+        <h3 class="descricao">Corte de Carne Tomahawk</h3>
+        <p class="preco">R$ 250,99</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
 
-    <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.YN5cCvpJZ4dI9cB1gatjfgHaHa?w=194&h=194&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Picanha Bovina Peça Inteira">
-      <h3>Picanha Bovina Peça Inteira Kg</h3>
-      <p class="preco">R$ 89,90</p>
-      <button class="btn">ADICIONAR</button>
-    </div>
+      <div class="produto">
+        <img src="../assets/picanha.png" alt="Picanha Bovina Peça Inteira" class="imagem">
+        <h3 class="descricao">Picanha Bovina Peça Inteira Kg</h3>
+        <p class="preco">R$ 89,90</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
 
-    <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.RRfLO7Rl5cNwXALg8LUJrAHaHa?w=198&h=198&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Maminha Bovina Atc Vácuo">
-      <h3>Maminha Bovina Atc Vácuo Kg</h3>
-      <p class="preco">R$ 53,90</p>
-      <button class="btn">ADICIONAR</button>
-    </div>
+      <div class="produto">
+        <img src="../assets/maminha.png" alt="Maminha Bovina Atc Vácuo" class="imagem">
+        <h3 class="descricao">Maminha Bovina Atc Vácuo Kg</h3>
+        <p class="preco">R$ 53,90</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
 
-    <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.pYTDCNbJ3YU9gGmyx-ywpAHaHa?w=180&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Pernil Suíno Com Pele Resfriado">
-      <h3>Pernil Suíno Com Pele Resfriado Kg</h3>
-      <p class="preco">R$ 17,99</p>
-      <button class="btn">ADICIONAR</button>
+      <div class="produto">
+        <img src="../assets/pernilsuino.png" alt="Pernil Suíno Com Pele Resfriado" class="imagem">
+        <h3 class="descricao">Pernil Suíno Com Pele Resfriado Kg</h3>
+        <p class="preco">R$ 17,99</p>
+        <button class="botao">ADICIONAR</button>
+      </div>
+        </section>
+      <a href="contato.html" class="botao-whats">
+        <img src="../assets/whatsapp.png" alt="Logotipo do whatsapp" class="botao-whats-img">
+      </a>
+      <section class="faq">
+      <h2>Perguntas Frequentes</h2>
+      <div class="accordion-total">
+              <input type="checkbox" id="item1">
+              <label for="item1">O que é a CSS?</label>
+              <div class="accordion-texto">
+              <p>
+                Na Corporativa Superfácil Supermercado (CSS), nossa prioridade é tornar suas compras rápidas, práticas e confiáveis. Estamos aqui para simplificar o seu dia a dia, garantindo que você encontre tudo que precisa com qualidade e eficiência.
+              </p>
+        </div>
+      </div>
+
+      <div class="accordion-total">
+              <input type="checkbox" id="item2">
+              <label for="item2">Como faço pedidos?</label>
+              <div class="accordion-texto">
+              <p>
+                Você pode selecionar produtos, fazer o pagamento e receber os produtos no conforto de seu lar!
+              </p>
+        </div>
     </div>
-  </section>
-  <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
+    </section>
 </div>
+</main>
+
 <footer>
-  <div class="final">
-    <p>&copy; 2025 Corporativa Superfácil Supermercados (CSS). Todos os direitos reservados.</p>
-  </div>
+    <div class="final">
+        <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
+    </div>
 </footer>
 </body>
 </html>

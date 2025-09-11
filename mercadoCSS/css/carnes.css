@@ -1,173 +1,441 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial;
-  color: #000;
+:root{
+    --branco: #f1f1f1;
+    --cinzagelo: #F5F5F5;
+    --preto: #000000;
+    --cinzaescuro: #A6AEA8;
+    --temapagina: #e32626;
+    --hovernav: #393838;
+    
 }
 
-body {
-  background: #f9f9f9;
-  color: #333;
+#modo-escuro:checked ~ .paginacomp {
+    --branco: #121212;
+    --cinzagelo: #1E1E1E;
+    --preto: #E5E5E5;
+    --cinzaescuro: #B0B0B0;
+    --temapagina: #e32626;
+    --hovernav: #333333;
 }
 
+@media print {
+  body {
+    background-color: var(--branco);
+    color: var(--preto);
+  }
+  nav, .botao, .botao-whats {
+    display: none;
+  }
+  .produto {
+    page-break-inside: avoid;
+    border: 1px solid var(--cinzaescuro);
+    margin-bottom: 10px;
+    padding: 10px;
+  }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #d9d9d9;
-  padding: 10px 20px;
-  height: 55px;
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: var(--cinzaescuro);
+  }
+
+  .accordion-texto {
+    max-height: none !important; 
+    padding: 10px !important;
+    display: block !important;
+    color: var(--preto);
+    background: var(--branco);
+  }
+
+  .accordion-total label::after {
+    content: "";
+  }
 }
 
+@media (max-width: 480px) {
 
-.logo {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  margin-right: 0px;
+  header { 
+    gap: 10px;
+    height: 55px;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .menu-container {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;  
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .menu-container > a {
+    margin-left: 0;
+    color: var(--preto);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .iconeemodoescuro{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px; 
+    gap: 10px; 
+    align-items: center;
+  }
+
+  nav a {
+    width: auto; 
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .produtos-container {
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .produto {
+    flex: 1 1 150px;
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+
+  h1 {         
+    margin: 20px 0 15px 0;
+    letter-spacing: 1.5px;
+    padding-bottom: 12px;
+  }
+
+  h1::after {
+    width: 40px;              
+    height: 3px;
+    margin: 6px auto 0 auto;
+  }
+
+  .imagem {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .botao-whats-img {
+    max-width: 50px;
+    height: auto;
+    width: 50px; 
+  }
+
+  .troca-tema {
+    padding: 5px 10px;
+  }
+
+  footer .final {
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+    }
 }
 
-.menu-superior {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  color: #000;
-  cursor: pointer;
+@media (max-width: 360px) {
+  header {
+    padding: 5px 10px;
+    gap: 5px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .troca-tema {
+    padding: 3px 6px;
+  }
+
+  .menu-container {
+    gap: 5px;     
+  }
+
+  .botao-whats-img {
+    width: 45px;   
+    height: auto; 
+    max-height: 50px;
+  }
+
+  h1 {     
+    margin: 15px 0 10px 0;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+  }
+
+  h1::after {
+    width: 30px;
+    height: 3px;
+    margin: 5px auto 0 auto;
+  }
+}
+    
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cinzagelo);
 }
 
-.menu-superior a {
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 14px;
-  cursor: pointer;
-  font-size: 18px;
+.limpeza {
+    font-weight: bold;
 }
 
-.menu-superior i {
-  font-size: 18px;
-  cursor: pointer;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  margin-left: 20px;
+.paginacomp {
+    background-color: var(--cinzagelo);
+    min-height: 100vh;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background: red;
-  padding: 8px 21px;
-  gap: 110px;
-  overflow-x: auto;
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;      
+    gap: 20px;           
+    justify-content: center;
+    padding: 20px 60px 60px 60px;
+    background-color: var(--cinzagelo);
 }
 
-nav a {
-  text-decoration: none;
-  margin: 0 20px;
-  font-size: 18px;
+header{
+    background-color: var(--cinzaescuro);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px var(--preto);
+    height: auto; 
+    justify-content: space-between;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.logo{
+    height: 50px;
 }
 
-nav a.active {
-  color: #fff;
+.menu-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.produtos {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+.menu-container  > a{
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    color: var(--preto);
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: none;
 }
 
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+.menu-container  > a:hover{
+    color: var(--cinzaescuro);
 }
 
-.card:hover {
-  transform: scale(1.03);
+nav{
+    background-color: var(--temapagina);
+    padding: 10px 50px 10px 50px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-.card img {
-  max-width: 100%;
-  height: 120px;
-  object-fit: contain;
+nav{
+    background-color: var(--temapagina);
+    padding: 10px 50px 10px 50px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 15px;
 }
 
-.card h3 {
-  font-size: 16px;
-  margin: 10px 0;
-  height: 40px;
+nav a{
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 18px;
 }
 
+nav a:hover{
+    text-decoration: underline;
+}
+
+nav a:active{
+    font-weight: bold;
+}
+
+.carnes{
+    font-weight: bold;
+}
+
+.produto-geral{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 60px;
+}
+.produto {
+    border: 1px solid var(--cinzagelo);
+    padding: 10px;
+    background-color: var(--branco);
+    color: var(--preto);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 180px;
+    box-shadow: 0 2px 4px var(--preto);
+
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; 
+    font-size: clamp(1.8rem, 6vw, 2.5rem);              
+    color: var(--temapagina);        
+    text-align: center;              
+    margin: 20px 0 10px 0;         
+    text-transform: uppercase;       
+    letter-spacing: 2px;             
+    position: relative;              
+    padding-bottom: 15px;            
+}
+
+h1::after {
+    content: '';                     
+    display: block;
+    width: clamp(30px, 10vw, 50px);                     
+    height: 4px;                     
+    background-color: var(--temapagina); 
+    margin: 8px auto 0 auto;         
+    border-radius: 2px;              
+}
+
+.imagem{
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
 .preco {
-  font-size: 18px;
-  font-weight: bold;
-  color: red;
-  margin-bottom: 10px;
+    font-weight: bolder;
+    color: var(--temapagina);
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+}
+.descricao{
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+.botao {
+    background-color: var(--temapagina);
+    font-weight: bold;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    border: none;           
+    border-radius: 4px;     
+    cursor: pointer;        
+    padding: 8px 12px;
+}
+.botao-whats {
+    position: fixed;     
+    bottom: 20px;        
+    right: 20px;        
+    z-index: 1000;      
 }
 
-.btn {
-  background: red;
-  color: white;
-  padding: 10px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: background 0.3s;
+.botao-whats-img {
+    width: 50px;   
+    height: auto;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 70px;
 }
 
-.btn:hover {
-  background: darkred;
+.troca-tema {
+    position: static; 
+    margin: 0 20px;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: var(--temapagina);
+    color: var(--preto);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d36500;
-  font-size: 32px;
-  border-radius: 50%;
-  padding: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  z-index: 1000;
-  transition: transform 0.2s;
+#modo-escuro {
+    display: none;
+}
+.faq {
+  font-family: 'Arial', sans-serif; 
+  font-size: clamp(1rem, 3vw, 1.2rem);              
+  color: var(--temapagina);        
+  text-align: center;                               
+  padding-bottom: 15px;
 }
 
-.whatsapp:hover {
-  transform: scale(1.1);
-  background: #8adba5;
+.accordion-total input {
+  display: none;
 }
 
-.whatsapp i {
+.accordion-total label {
   display: block;
+  background-color: var(--temapagina);
+  color: var(--preto);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 5px;
 }
 
-@media (max-width: 1024px) {
-  .produtos {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.accordion-texto {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--cinzagelo);
+    color: var(--preto);
+    padding: 0 10px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-@media (max-width: 600px) {
-  .produtos {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.accordion-total input:checked ~ .accordion-texto {
+  max-height: 200px;
+  padding: 10px;
+
+}
+
+footer {
+    background-color: var(--cinzaescuro);
+    color: var(--preto);
+    padding: 10px 0;
+    text-align: center;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.final {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
 }
