@@ -5,6 +5,7 @@
     --cinzaescuro: #A6AEA8;
     --temapagina: #87CEFA;
     --hovernav: #393838;
+    
 }
 
 #modo-escuro:checked ~ .paginacomp {
