@@ -372,8 +372,7 @@ h1::after {
     font-family: 'Arial', sans-serif; 
     font-size: clamp(1rem, 3vw, 1.2rem);              
     color: var(--temapagina);        
-    text-align: center;              
-    margin: 20px 0 10px 0;                   
+    text-align: center;                                 
     padding-bottom: 15px;
   }
   
