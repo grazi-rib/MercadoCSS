@@ -229,8 +229,23 @@ h1::after {
 .accordion-total input:checked ~ .accordion-texto {
   max-height: 200px;
   padding: 10px;
-<<<<<<< HEAD
+
 }
-=======
+
+footer {
+    background-color: var(--cinzaescuro);
+    color: var(--preto);
+    padding: 10px 0;
+    text-align: center;
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
->>>>>>> main
+
+.final {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
