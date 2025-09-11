@@ -27,27 +27,6 @@ header{
     gap: 20px;
 }
 
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-        text-align: center;
-    }
-    .logo {
-        height: 40px;
-        margin-bottom: 8px;
-    }
-    .menu-container {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 8px;
-    }
-    .menu-container > a {
-        margin-left: 0;
-        font-size: 16px;
-    }
-}
 
 .menu-container  > a{
     font-size: 18px;
