@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/checkout.css">
-    <link rel="stylesheet" href="../assets/fontawesome-free-7.0.0-web/css/all.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MercadoCSS</title>
+
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../assets/fontawesome-free-7.0.0-web/css/all.css" />
 </head>
 <body>
-    <input type="checkbox" id="modo-escuro">
+    <input type="checkbox" id="modo-escuro" />
+
     <div class="paginacomp">
         <header>
             <div class="iconeemodoescuro">
-                <img src="../assets/Untitled.png" alt="logo" class="logo">
+                <img src="../assets/Untitled.png" alt="Logo MercadoCSS" class="logo" />
                 <label for="modo-escuro" class="troca-tema">Alternar Tema</label>
             </div>
+
             <div class="menu-container">
                 <a href="about-us.html">Sobre nós</a>
                 <a href="checkout.html">
@@ -25,8 +28,9 @@
                 </a>
             </div>
         </header>
+
         <nav>
-            <a href="home.html">Inicio</a>
+            <a href="home.html">Início</a>
             <a href="limpeza.html">Limpeza</a>
             <a href="bebidas.html">Bebidas</a>
             <a href="carnes.html">Carnes</a>
@@ -34,53 +38,99 @@
             <a href="frios.html">Frios</a>
             <a href="padaria.html">Padaria</a>
         </nav>
-<div class="geral">
-        <div class="pagamento">
-                <h1 class="titulo"> Escolha uma forma de pagamento </h1>
-                <img src="../assets/cards.png" alt="Bandeira de Cartões de Pagamento" >
-                <img src="../assets/Cartão.png" alt="Ícone Cartão de Crédito" >
-                <p>Cartão de Crédito/Débito</p>
-                <img src="../assets/Pix.png" alt="Ícone do Pix" >
-                <p>PIX</p>
-                <img src="../assets/Boleto.png" >
-                <p>Boleto</p>
-            <div class="formspagamento">
-                <label for="number">Número do Cartão</label>
-                <input type="text" id="number" placeholder="Ex: XXXX-XXXX-XXXX-XXXX">
-                <label for="expiry">Vencimento</label>
-                <input type="text" id="expiry" placeholder="Ex: 08/25">
-                <label for="CVV">CVV</label>
-                <input type="text" id="CVV" placeholder="Ex: 123">
-            </div>
+
+        <div class="geral">
+            <!-- Seção de pagamento -->
+            <section class="pagamento">
+                <h1 class="titulo">Escolha uma forma de pagamento</h1>
+
+                <div class="formas-pagamento-icones">
+                    <img src="../assets/cards.png" alt="Bandeiras de Cartões" />
+                    <div class="forma-item">
+                        <img src="../assets/Cartão.png" alt="Cartão de Crédito/Débito" />
+                        <p>Cartão de Crédito/Débito</p>
+                    </div>
+                    <div class="forma-item">
+                        <img src="../assets/Pix.png" alt="Ícone do Pix" />
+                        <p>PIX</p>
+                    </div>
+                    <div class="forma-item">
+                        <img src="../assets/Boleto.png" alt="Ícone do Boleto" />
+                        <p>Boleto</p>
+                    </div>
+                </div>
+
+                <!-- Formulário de cartão -->
+                <form class="formspagamento">
+                    <div class="campo-cartao">
+                        <label for="number">Número do Cartão</label>
+                        <input type="text" id="number" placeholder="Ex: XXXX-XXXX-XXXX-XXXX" />
+                        <small>Ex: XXXX-XXXX-XXXX-XXXX</small>
+                    </div>
+
+                    <div class="campo-cartao">
+                        <label for="expiry">Vencimento</label>
+                        <input type="text" id="expiry" placeholder="Ex: 08/25" />
+                        <small>Ex: 08/25</small>
+                    </div>
+
+                    <div class="campo-cartao">
+                        <label for="CVV">CVV</label>
+                        <input type="text" id="CVV" placeholder="Ex: 123" />
+                        <small>Ex: 123</small>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Seção de informações do comprador -->
+            <section class="Info">
+                <h2 class="titulo">Informações do Comprador</h2>
+
+                <form class="formsinfo">
+                    <div>
+                        <label for="firstname">Primeiro Nome</label>
+                        <input type="text" id="firstname" placeholder="Ex: Pablo" />
+                    </div>
+
+                    <div>
+                        <label for="secondname">Segundo Nome</label>
+                        <input type="text" id="secondname" placeholder="Ex: Matheus" />
+                    </div>
+
+                    <div>
+                        <label for="andress">Endereço</label>
+                        <input type="text" id="andress" placeholder="Ex: Rua Emílio Neves" />
+                    </div>
+
+                    <div>
+                        <label for="andressnumber">Número</label>
+                        <input type="text" id="andressnumber" placeholder="Ex: 6954" />
+                    </div>
+
+                    <div>
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" placeholder="Ex: São Paulo" />
+                    </div>
+
+                    <div>
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" placeholder="Ex: São Paulo" />
+                    </div>
+                </form>
+
+                <button class="botao">CONFIRMAR</button>
+            </section>
         </div>
-    <div class="Info">
-                <h2 class="titulo"> Informações do Comprador</h2>
-            <div class="formsinfo">
-                <label for="firstname">Primeiro Nome</label>
-                <input type="text" id="firstname" placeholder="Ex: Pablo">
-                <label for="secondname">Segundo Nome</label>
-                <input type="text" id="secondname" placeholder="Ex: Matheus">
-                <label for="andress">Endereço</label>
-                <input type="text" id="andress" placeholder="Ex: Rua Emílio Neves">
-                <label for="andressnumber">Número</label>
-                <input type="text" id="andressnumber" placeholder="Ex: 6954">
-                <label for="estado">Estado</label>
-                <input type="text" id="estado" placeholder="Ex: São Paulo ">
-                <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" placeholder="Ex: São Paulo">
+
+        <a href="contato.html" class="botao-whats">
+            <img src="../assets/whatsapp.png" alt="Logo do WhatsApp" class="botao-whats-img" />
+        </a>
+
+        <footer>
+            <div class="final">
+                <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
             </div>
-        <button class="botao">
-            <p>CONFIRMAR</p>
-        </button>
+        </footer>
     </div>
-</div>
-    <a href="contato.html" class="botao-whats">
-            <img src="../assets/whatsapp.png" alt="Logo do WhatsApp" class="botao-whats-img" >
-    </a>
-    <footer>
-        <div class="final">
-            <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
-        </div>
-    </footer>
 </body>
 </html>

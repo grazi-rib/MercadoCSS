@@ -1,5 +1,7 @@
-
-:root {
+/* =========================
+   Variáveis CSS
+   ========================= */
+   :root {
     --branco: #f1f1f1;
     --cinzagelo: #F5F5F5;
     --preto: #000000;
@@ -13,71 +15,335 @@
     --cinzagelo: #1E1E1E;
     --preto: #E5E5E5;
     --cinzaescuro: #B0B0B0;
-    --temapagina: #2FA63A;
+    --temapagina: #a83627;
     --hovernav: #333333;
 }
 
+/* =========================
+   Reset e Tipografia
+   ========================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+html, body {
+    height: 100%;
+}
+
+/* =========================
+   Layout geral
+   ========================= */
+.paginacomp {
+    background-color: var(--cinzagelo);
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* =========================
+   Header
+   ========================= */
+header {
+    background-color: var(--cinzaescuro);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px var(--preto);
+    height: 55px;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 40px;
+}
+
+/* =========================
+   Menu container (header)
+   ========================= */
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-container > a {
+    font-size: 18px;
+    color: var(--preto);
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.menu-container > a:hover {
+    color: var(--hovernav);
+}
+
+/* =========================
+   Navegação principal (navbar)
+   ========================= */
+nav {
+    background-color: var(--temapagina);
+    padding: 10px 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a:active {
+    font-weight: bold;
+}
+
+/* =========================
+   Conteúdo geral (container dos formulários)
+   ========================= */
+.geral {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   Pagamento - container principal
+   ========================= */
+.pagamento {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+.pagamento .titulo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Container dos ícones de formas de pagamento */
+.formas-pagamento-icones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.forma-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--preto);
+}
+
+.forma-item img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+/* Formulário cartão */
+.formspagamento {
+    display: flex;
+    gap: 20px;
+}
+
+.campo-cartao {
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--preto);
+    flex: 1;
+}
+
+.campo-cartao label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.campo-cartao input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.campo-cartao small {
+    color: #666;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+/* =========================
+   Informações do Comprador
+   ========================= */
+.Info {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+.Info .titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.formsinfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 20px;
+}
+
+.formsinfo div {
+    display: flex;
+    flex-direction: column;
+}
+
+.formsinfo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formsinfo input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Botão Confirmar
+   ========================= */
+.botao {
+    background-color: var(--temapagina);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 12px 25px;
+    color: var(--preto);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 150px;
+    text-align: center;
+}
+
+.botao:hover {
+    background-color: #b43a2a;
+}
+
+/* =========================
+   Botão WhatsApp fixo
+   ========================= */
+.botao-whats {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: transparent;
+    display: block;
+}
+
+.botao-whats-img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.botao-whats:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   Toggle tema escuro
+   ========================= */
+.troca-tema {
+    position: static;
+    margin: 0 20px;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: var(--temapagina);
+    color: var(--preto);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#modo-escuro {
+    display: none;
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    background-color: var(--cinzaescuro);
+    color: var(--preto);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.final {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+/* =========================
+   Responsividade
+   ========================= */
 @media (max-width: 768px) {
-    .img-texto1 {
+    .geral {
         flex-direction: column;
-        text-align: center;
-    }
-    
-    .img-texto2 {
-        flex-direction: column;
-        text-align: center;
+        gap: 40px;
+        padding: 0 10px;
     }
 
-    .texto {
-        text-align: justify;
-    }
-
-    header { 
-        flex-wrap: wrap;
-        gap: 10px;
-        height: 55px;
-        position: relative;
-    }
-
-    .logo {
-        height: 30px;
-    }
-    
-
-    .menu-container {
-        flex-direction: row;
-        align-items: center;
-        margin-top: 10px;  
-        display: flex;
-        gap: 10px;
-        margin-left: auto;
-    }
-
-    .menu-container > a {
-        margin-left: 0;
-        font-size: 18px;
-        color: var(--preto);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-    }
-
-    .iconeemodoescuro{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-right: auto;
+    .pagamento,
+    .Info {
+        max-width: 100%;
+        flex: 1 1 100%;
     }
 
     nav {
         flex-direction: column;
-        padding: 20px 10px; 
-        gap: 15px; 
+        padding: 20px 10px;
+        gap: 15px;
         align-items: center;
     }
 
     nav a {
-        width: auto; 
+        width: auto;
         text-align: center;
         font-size: 16px;
         padding: 10px 0;
@@ -105,162 +371,4 @@
         gap: 10px;
         padding: 10px;
     }
-
-}
-
-body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    height: 100%;
-}
-
-.paginacomp {
-    background-color: var(--cinzagelo);
-    min-height: 100vh;
-    padding-bottom: 80px;
-}
-
-header{
-    background-color: var(--cinzaescuro);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 4px var(--preto);
-    height: 35px;
-    justify-content: space-between;
-}
-
-.logo{
-    height: 50px;
-}
-
-.menu-container{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.menu-container  > a{
-    font-size: 18px;
-    color: var(--preto);
-    font-weight: bold;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-.menu-container  > a:hover{
-    color: var(--hovernav);
-}
-
-nav{
-    background-color: var(--temapagina);
-    padding: 10px 50px 10px 50px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    gap: 15px;
-}
-
-nav a{
-    color: var(--preto);
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav a:hover{
-    text-decoration: underline;
-}
-
-nav a:active{
-    font-weight: bold;
-}
-
-.geral{
-    
-}
-
-.formsinfo{
-    
-    display: flex;
-    flex-direction: column; /* Coloca os elementos em coluna */
-    margin-bottom: 15px; /* Espaçamento entre os campos */
-}
-
-input {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 220px;
-  }
-
-  label {
-    margin-bottom: 5px; /* Espaçamento entre a label e o input */
-    font-weight: bold; /* Opcional: deixa o texto da label em negrito */
-    width: 300px;
-  }
-
-.botao{
-    background-color: var(--temapagina);
-    font-weight: bold;
-    font-size: 24px;
-    border-radius: 20px;
-}
-
-.botao-whats {
-    position: fixed;
-    bottom: 80px;   
-    right: 20px;    
-    border-radius: 50%;  
-    padding: 10px;
-}
-
-.botao-whats-img {
-    width: 50px;  
-    height: 50px;
-    display: block;
-}
-
-.botao-whats:hover {
-    transform: scale(1.1);
-}
-
-.troca-tema {
-    position: static; 
-    margin: 0 20px;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-    cursor: pointer;
-    background-color: var(--temapagina);
-    color: var(--preto);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-#modo-escuro {
-    display: none;
-}
-
-footer {
-    background-color: var(--cinzaescuro);
-    color: var(--preto);
-    padding: 10px 0;
-    text-align: center;
-    font-size: 14px;
-}
-
-.final {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
 }
