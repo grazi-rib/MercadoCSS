@@ -1,19 +1,10 @@
 :root{
     --branco: #f1f1f1;
-    --cinza: #A6AEA8;
+    --cinzagelo: #F5F5F5;
     --preto: #000000;
-    --cinzaesc: #393838;
-    --roxo: #87CEFA;
-    --cinzaclaro: #989696;
-    --off: #f2f0ef;
-    --lilas: #87CEFA;
-
-    --cinzagelo: #1E1E1E;
-    --preto: #E5E5E5;
-    --cinzaescuro: #B0B0B0;
+    --cinzaescuro: #A6AEA8;
     --temapagina: #87CEFA;
-    --hovernav: #333333;
-
+    --hovernav: #393838;
 }
 
 #modo-escuro:checked ~ .paginacomp {
@@ -21,7 +12,7 @@
     --cinzagelo: #1E1E1E;
     --preto: #E5E5E5;
     --cinzaescuro: #B0B0B0;
-    --temapagina: #87CEFA;
+    --temapagina: #6398b9;
     --hovernav: #333333;
 }
     
@@ -32,15 +23,18 @@
     background-color: var(--branco);
 }
 
-
+.paginacomp {
+    background-color: var(--cinzagelo);
+    min-height: 100vh;
+}
 
 header{
-    background-color: var(--cinza);
+    background-color: var(--cinzaescuro);
     padding: 10px 20px;
     display: flex;
     align-items: center;
     box-shadow: 0 2px 4px var(--preto);
-    height: 35px;
+    height: auto; 
     justify-content: space-between;
 }
 
@@ -63,11 +57,22 @@ header{
 }
 
 .menu-container  > a:hover{
-    color: var(--cinzaesc);
+    color: var(--cinzaescuro);
 }
 
 nav{
-    background-color: var(--roxo);
+    background-color: var(--temapagina);
+    padding: 10px 50px 10px 50px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+nav{
+    background-color: var(--temapagina);
     padding: 10px 50px 10px 50px;
     align-items: center;
     justify-content: space-between;
@@ -100,15 +105,19 @@ nav a:active{
     justify-content: center;
     padding: 60px;
 }
-.produto{
-    border: 1px solid var(--cinzaclaro);
-    padding: 15px;
-    background-color: var(--off);
+.produto {
+    border: 1px solid var(--cinzagelo);
+    padding: 10px;
+    background-color: var(--branco);
+    color: var(--preto);
     text-align: center;
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 20px;
+    width: 180px;
+    box-shadow: 0 2px 4px var(--preto);
+
 }
 
 h1 {
@@ -138,16 +147,22 @@ h1::after {
     height: auto;
     margin: 0 auto;
 }
-.preco{
-    font-weight: bold;
-    color: var(--lilas);
+.preco {
+    font-weight: bolder;
+    color: var(--temapagina);
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
 }
 .descricao{
     font-size: 16px;
 }
-.botao{
-    background-color: var(--lilas);
+.botao {
+    background-color: var(--temapagina);
     font-weight: bold;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    border: none;           
+    border-radius: 4px;     
+    cursor: pointer;        
+    padding: 8px 12px;
 }
 .botao-whats{
     position: fixed;
@@ -201,13 +216,13 @@ h1::after {
 }
 
 .accordion-texto {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background-color: var(--cinzagelo);
-  color: var(--preto);
-  padding: 0 10px;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--cinzagelo);
+    color: var(--preto);
+    padding: 0 10px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .accordion-total input:checked ~ .accordion-texto {
