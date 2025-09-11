@@ -162,6 +162,23 @@ nav{
     gap: 15px;
 }
 
+.duvidas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: var(--preto);
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.duvidas-whats-img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
 nav a{
     color: var(--preto);
     text-decoration: none;
@@ -201,6 +218,7 @@ nav a:active{
     display: none;
 }
 
+
 .duvidas{
     color: var(--preto);
     font-size: 18px;
@@ -221,6 +239,48 @@ nav a:active{
     
 }
 
+.contato-form input, 
+.contato-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cinzaescuro);
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    border-color: var(--temapagina);
+    outline: none;
+}
+
+.contato-form label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contato-container button {
+    background-color: var(--temapagina);
+    color: var(--branco);
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--preto);
+}
+
+.contato-container button:hover {
+    background-color: var(--temapagina);
+}
+
+.contato-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--temapagina);
+}
+
 .conteiner{
     display: flex;
     flex-direction: column;
@@ -228,8 +288,8 @@ nav a:active{
     justify-content: center;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
     margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .contato-container{
@@ -238,13 +298,14 @@ nav a:active{
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 350px; 
     padding: 20px;
-    background-color: #fff; 
+    background-color: var(--branco); 
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px var(--preto);
     margin: 0 auto;
     gap: 15px;
+    max-width: 500px;
+    width: 100%;
 }
 
 .contato-container button{
