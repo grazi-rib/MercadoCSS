@@ -13,10 +13,12 @@ header{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     height: 35px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .logo{
     height: 50px;
+    transform: translateY(-5px);
 }
 
 .menu-container{
@@ -24,6 +26,7 @@ header{
     align-items: center;
     gap: 20px;
 }
+
 
 .menu-container  > a{
     font-size: 18px;
