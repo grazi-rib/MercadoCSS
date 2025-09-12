@@ -412,3 +412,81 @@ footer {
         padding-left: 5px;     
     }
   }
+
+@media print {
+    body {
+        background-color: var(--branco);
+        color: var(--preto);
+    }
+
+    nav,
+    .botao,
+    .botao-whats,
+    .troca-tema {
+        display: none !important;
+    }
+
+    .tabela-total {
+        width: 100%;
+        font-size: 12pt;
+        box-shadow: none;
+        border: 1px solid var(--cinzaescuro);
+        margin: 0 0 20px 0;
+        page-break-inside: avoid;
+    }
+
+    .tabela-total th {
+        background-color: var(--temapagina);
+        color: var(--branco);
+        -webkit-print-color-adjust: exact;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .tabela-total td {
+        padding: 8px;
+        border: 1px solid var(--cinzaescuro);
+        background-color: var(--branco);
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .tabela-total td:nth-child(2) ul {
+        display: block;
+        padding-left: 15px;
+        text-align: left;
+    }
+
+    .accordion-texto {
+        max-height: none !important;
+        display: block !important;
+        padding: 10px !important;
+        color: var(--preto);
+        background-color: var(--branco);
+    }
+
+    .accordion-total label::after {
+        content: "";
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: var(--cinzaescuro);
+    }
+
+    footer {
+        background-color: var(--branco);
+        color: var(--preto);
+        padding: 10px 0;
+        text-align: center;
+        font-size: 12pt;
+    }
+
+    .final {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+}
