@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-7.0.0-web/css/all.css">
+    <title>MercadoCSS</title>
+</head>
+<body>
+    <input type="checkbox" id="modo-escuro">
+    <div class="paginacomp">
+        <header>
+            <div class="iconeemodoescuro">
+                <img src="../assets/Untitled.png" alt="logo" class="logo">
+                <label for="modo-escuro" class="troca-tema">Alternar Tema</label>
+            </div>
+            <div class="menu-container">
+                <a href="about-us.html">Sobre nós</a>
+                <a href="checkout.html" aria-label="Carrinho de compras">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="login.html" aria-label="Login do usuário">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </header>
+        <nav>
+            <a href="home.html">Inicio</a>
+            <a href="limpeza.html">Limpeza</a>
+            <a href="bebidas.html">Bebidas</a>
+            <a href="carnes.html">Carnes</a>
+            <a href="hortifruti.html">Hortifruti</a>
+            <a href="frios.html">Frios</a>
+            <a href="padaria.html">Padaria</a>
+        </nav>
+<div class="conteiner">
+    <div class="duvidas">
+         <img src="../assets/whatsapp.png" alt="Logotipo do Whatsapp Verde" class="botao-whats-img">
+        <h1>Dúvidas? Preencha o formulário que nossos atendentes entrarão em contato:</h1>
+    </div>
+        <div class="contato-container">
+            <main>
+                <h1>Contato</h1>
+                <form action="#" method="post" class="contato-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex.: Fulano da Silva Jr." required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="Ex.: (XX) XXXXX-XXXX" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ex.: teste@teste.com.br" required>
+
+                    <label for="duvida">Duvida:</label>
+                    <textarea id="duvida" name="duvida" rows="5" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </main>
+        </div>
+    </div>
+    <section class="faq">
+            <h2>Perguntas Frequentes</h2>
+            <div class="accordion-total">
+                <input type="checkbox" id="item1">
+                <label for="item1">O que é a CSS?</label>
+                <div class="accordion-texto">
+                <p>
+                    Na Corporativa Superfácil Supermercado (CSS), nossa prioridade é tornar suas compras rápidas, práticas e confiáveis. Estamos aqui para simplificar o seu dia a dia, garantindo que você encontre tudo que precisa com qualidade e eficiência.
+                </p>
+                </div>
+            </div>
+
+            <div class="accordion-total">
+                <input type="checkbox" id="item2">
+                <label for="item2">Como faço pedidos?</label>
+                <div class="accordion-texto">
+                <p>
+                    Você pode selecionar produtos, fazer o pagamento e receber os produtos no conforto de seu lar!
+                </p>
+                </div>
+            </div>
+    </section>
+<footer>
+    <div class="final">
+        <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
+    </div>
+    </div>
+</footer>
+</body>
+</html>
