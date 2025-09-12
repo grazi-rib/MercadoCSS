@@ -3,7 +3,7 @@
     --cinzagelo: #F5F5F5;
     --preto: #000000;
     --cinzaescuro: #A6AEA8;
-    --temapagina: #007c7c;
+    --temapagina: #86740e;
     --hovernav: #393838;
 }
 
@@ -12,7 +12,7 @@
     --cinzagelo: #1E1E1E;
     --preto: #E5E5E5;
     --cinzaescuro: #B0B0B0;
-    --temapagina: rgb(5, 105, 105);
+    --temapagina: #86740e;
     --hovernav: #333333;
 }
 
@@ -226,7 +226,6 @@ header{
 }
 
 .menu-container  > a{
-    font-size: 18px;
     font-size: clamp(0.9rem, 3vw, 1.2rem);
     color: var(--preto);
     font-weight: bold;
