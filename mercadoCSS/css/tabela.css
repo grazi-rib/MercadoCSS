@@ -469,12 +469,6 @@ footer {
         content: "";
     }
 
-    a::after {
-        content: " (" attr(href) ")";
-        font-size: 10pt;
-        color: var(--cinzaescuro);
-    }
-
     footer {
         background-color: var(--branco);
         color: var(--preto);

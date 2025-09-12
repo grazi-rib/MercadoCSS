@@ -721,3 +721,125 @@ footer {
     }
 
 }
+
+@media print {
+  body {
+    background-color: var(--branco);
+    color: var(--preto);
+    font-family: Arial, sans-serif;
+  }
+  .botao-produto,
+  .botao-whats,
+  .menu-container,
+  .troca-tema,
+  nav {
+    display: none;
+  }
+
+  /* =========================
+     Container geral
+     ========================= */
+  .geral {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* =========================
+     Seções Pagamento e Info
+     ========================= */
+  .pagamento,
+  .Info {
+    display: block;
+    max-width: 100% !important;
+    padding: 15px !important;
+    margin: 0 0 15px 0;
+    border: 1px solid var(--cinzaescuro);
+    background-color: var(--branco) !important;
+    color: var(--preto) !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  /* Títulos */
+  .titulo {
+    font-size: 18pt !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--preto) !important;
+  }
+
+  /* =========================
+     Formulários
+     ========================= */
+  .formsinfo,
+  .formspagamento {
+    display: block;
+    width: 100%;
+    gap: 0;
+  }
+
+  .formsinfo div,
+  .campo-cartao {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .formsinfo label,
+  .campo-cartao label {
+    font-weight: bold;
+    color: var(--preto) !important;
+  }
+
+  .formsinfo input,
+  .campo-cartao input {
+    width: 100%;
+    border: 1px solid var(--cinzaescuro);
+    background-color: var(--branco) !important;
+    color: var(--preto) !important;
+    padding: 6px 8px;
+    font-size: 12pt;
+  }
+
+  .accordion-texto {
+    max-height: none !important; 
+    padding: 10px !important;
+    display: block !important;
+    color: var(--preto);
+    background: var(--branco);
+  }
+
+  .accordion-total label::after {
+    content: "";
+  }
+
+  footer {
+    border-top: 1px solid var(--cor-borda);
+    padding: 10px;
+    font-size: 10pt;
+    background: var(--cor-card) !important;
+    color: var(--cor-texto) !important;
+  }
+
+  /* =========================
+     Imagens
+     ========================= */
+  .pagamento img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
+  /* =========================
+     Quebras de página
+     ========================= */
+  .pagamento,
+  .Info,
+  .accordion-total {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
+

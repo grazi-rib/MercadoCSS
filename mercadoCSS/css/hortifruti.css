@@ -28,39 +28,48 @@
   }
 
   @media print {
-    body {
-      background-color: var(--branco);
-      color: var(--preto);
-    }
-    nav, .botao, .botao-whats {
-      display: none;
-    }
-    .produto {
-      page-break-inside: avoid;
-      border: 1px solid var(--cinzaescuro);
-      margin-bottom: 10px;
-      padding: 10px;
-    }
-  
-    a::after {
-      content: " (" attr(href) ")";
-      font-size: 10pt;
-      color: var(--cinzaescuro);
-    }
-  
-    .accordion-texto {
-      max-height: none !important; 
-      padding: 10px !important;
-      display: block !important;
-      color: var(--preto);
-      background: var(--branco);
-    }
-  
-    .accordion-total label::after {
-      content: "";
-    }
-  
+  body {
+    background-color: var(--branco);
+    color: var(--preto);
+    font-family: Arial, sans-serif;
   }
+  .botao-produto,
+  .botao-whats,
+  .menu-container,
+  .troca-tema,
+  nav {
+    display: none;
+  }
+  .produto {
+    page-break-inside: avoid;
+    border: 1px solid var(--cor-borda);
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--cor-card) !important;
+    color: var(--cor-texto) !important;
+    box-shadow: none !important;
+  }
+
+  .accordion-texto {
+    max-height: none !important; 
+    padding: 10px !important;
+    display: block !important;
+    color: var(--preto);
+    background: var(--branco);
+  }
+
+  .accordion-total label::after {
+    content: "";
+  }
+
+  footer {
+    border-top: 1px solid var(--cor-borda);
+    padding: 10px;
+    font-size: 10pt;
+    background: var(--cor-card) !important;
+    color: var(--cor-texto) !important;
+  }
+}
   
   @media (max-width: 480px) {
   
@@ -421,7 +430,4 @@ footer {
     flex-direction: column;
     gap: 8px;
     align-items: center;
-}
-.hortifruti{
-    font-weight: bolder;
 }

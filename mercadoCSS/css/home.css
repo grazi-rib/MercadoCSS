@@ -459,7 +459,8 @@ footer {
   .botao-produto,
   .botao-whats,
   .menu-container,
-  .troca-tema {
+  .troca-tema,
+  nav {
     display: none !important;
   }
 
@@ -477,12 +478,6 @@ footer {
     max-width: 150px;
     height: auto;
     margin: 0 auto 10px auto;
-  }
-
-  a::after {
-    content: " (" attr(href) ")";
-    font-size: 10pt;
-    color: var(--cor-borda);
   }
 
   .accordion-texto {

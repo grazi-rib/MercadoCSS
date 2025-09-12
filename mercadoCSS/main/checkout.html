@@ -37,8 +37,9 @@
             <a href="hortifruti.html">Hortifruti</a>
             <a href="frios.html">Frios</a>
             <a href="padaria.html">Padaria</a>
+            <a href="tabela.html">Cesta Básica</a>
         </nav>
-
+<main>
         <div class="geral">
 
             <section class="pagamento">
@@ -46,19 +47,16 @@
                 <p>Bandeiras Aceitas</p>
                 <img src="../assets/cards.png" alt="Bandeiras de Cartões">
     <div class="formas-container">
-        <!-- Radios de forma de pagamento -->
         <input type="radio" name="forma" id="cartao" />
         <input type="radio" name="forma" id="pix" />
         <input type="radio" name="forma" id="boleto" />
 
-        <!-- Botões visuais -->
         <div class="botoes-pagamento">
             <label for="cartao" class="forma-btn">Cartão de Crédito/Débito</label>
             <label for="pix" class="forma-btn">PIX</label>
             <label for="boleto" class="forma-btn">Boleto</label>
         </div>
 
-        <!-- TODAS as opções estão aqui dentro -->
         <div class="opcoes">
             <div class="cartao-opcao">
                 <form class="formspagamento">
@@ -72,7 +70,7 @@
                     </div>
                     <div class="campo-cartao">
                         <label for="CVV">CVV</label>
-                        <input type="text" id="CVV" placeholder="Ex: 123" />
+                        <input type="password" maxlength="3" id="CVV" placeholder="Ex: 123" />
                     </div>
                 </form>
             </div>
@@ -88,7 +86,6 @@
     </div>
 </section>
 
-            <!-- Seção de informações do comprador -->
             <section class="Info">
                 <h2 class="titulo">Informações do Comprador</h2>
 
@@ -153,6 +150,7 @@
                 </div>
             </div>
         </section>
+</main>
         <footer>
             <div class="final">
                 <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>

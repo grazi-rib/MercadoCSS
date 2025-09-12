@@ -276,11 +276,15 @@ footer {
   body {
     background-color: var(--branco);
     color: var(--preto);
+    font-family: Arial, sans-serif;
   }
-  nav, .botao, .botao-whats, .troca-tema, header {
+  .botao-produto,
+  .botao-whats,
+  .menu-container,
+  .troca-tema,
+  nav {
     display: none;
   }
-
   
   .form {
     display: block !important;
@@ -319,12 +323,6 @@ footer {
 
   .form-secundario button {
     display: none !important; 
-  }
-
-  a::after {
-    content: " (" attr(href) ")";
-    font-size: 10pt;
-    color: #555;
   }
 
   .accordion-texto {
