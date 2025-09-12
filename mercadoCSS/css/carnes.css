@@ -1,10 +1,11 @@
-:root {
+:root{
     --branco: #f1f1f1;
     --cinzagelo: #F5F5F5;
     --preto: #000000;
     --cinzaescuro: #A6AEA8;
-    --temapagina: #86740e;
+    --temapagina: #e32626;
     --hovernav: #393838;
+    
 }
 
 #modo-escuro:checked ~ .paginacomp {
@@ -12,7 +13,7 @@
     --cinzagelo: #1E1E1E;
     --preto: #E5E5E5;
     --cinzaescuro: #B0B0B0;
-    --temapagina: #86740e;
+    --temapagina: #e32626;
     --hovernav: #333333;
 }
 
@@ -48,7 +49,6 @@
   .accordion-total label::after {
     content: "";
   }
-
 }
 
 @media (max-width: 480px) {
@@ -94,7 +94,6 @@
   }
 
   nav {
-    flex-direction: column;
     padding: 10px; 
     gap: 10px; 
     align-items: center;
@@ -190,14 +189,16 @@
     margin: 5px auto 0 auto;
   }
 }
-
-
+    
 body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--cinzagelo);
-    color: var(--preto);
+}
+
+.limpeza {
+    font-weight: bold;
 }
 
 .paginacomp {
@@ -248,10 +249,19 @@ nav{
     -webkit-overflow-scrolling: touch;
 }
 
+nav{
+    background-color: var(--temapagina);
+    padding: 10px 50px 10px 50px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 15px;
+}
+
 nav a{
     color: var(--preto);
     text-decoration: none;
-    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    font-size: 18px;
 }
 
 nav a:hover{
@@ -262,25 +272,30 @@ nav a:active{
     font-weight: bold;
 }
 
-.descricao{
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-    color: var(--preto);
-}
-
-.preco {
-    font-weight: bolder;
-    color: var(--temapagina);
-    font-size: clamp(1.2rem, 4vw, 1.6rem);
-}
-
-.botao {
-    background-color: var(--temapagina);
+.carnes{
     font-weight: bold;
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    border: none;           
-    border-radius: 4px;     
-    cursor: pointer;        
-    padding: 8px 12px;
+}
+
+.produto-geral{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 60px;
+}
+.produto {
+    border: 1px solid var(--cinzagelo);
+    padding: 10px;
+    background-color: var(--branco);
+    color: var(--preto);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 180px;
+    box-shadow: 0 2px 4px var(--preto);
+
 }
 
 h1 {
@@ -305,37 +320,27 @@ h1::after {
     border-radius: 2px;              
 }
 
-.produto {
-    border: 1px solid var(--cinzagelo);
-    padding: 10px;
-    background-color: var(--branco);
-    color: var(--preto);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    width: 180px;
-    box-shadow: 0 2px 4px var(--preto);
-
-}
-
-.imagem {
-    max-width: 200px; 
-    height: auto; 
+.imagem{
+    max-width: 200px;
+    height: auto;
     margin: 0 auto;
 }
-
-.produtos-container {
-    display: flex;
-    flex-wrap: wrap;      
-    gap: 20px;           
-    justify-content: center;
-    padding: 20px 60px 60px 60px;
-    background-color: var(--cinzagelo);
+.preco {
+    font-weight: bolder;
+    color: var(--temapagina);
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
 }
-.frios {
-    font-weight: bolder;  
+.descricao{
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+.botao {
+    background-color: var(--temapagina);
+    font-weight: bold;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    border: none;           
+    border-radius: 4px;     
+    cursor: pointer;        
+    padding: 8px 12px;
 }
 .botao-whats {
     position: fixed;     
@@ -351,7 +356,6 @@ h1::after {
     min-height: 40px;
     max-width: 70px;
 }
-
 
 .troca-tema {
     position: static; 
@@ -370,13 +374,11 @@ h1::after {
 #modo-escuro {
     display: none;
 }
-
 .faq {
   font-family: 'Arial', sans-serif; 
   font-size: clamp(1rem, 3vw, 1.2rem);              
   color: var(--temapagina);        
-  text-align: center;              
-  margin: 20px 0 10px 0;                   
+  text-align: center;                               
   padding-bottom: 15px;
 }
 
@@ -395,18 +397,19 @@ h1::after {
 }
 
 .accordion-texto {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background-color: var(--cinzagelo);
-  color: var(--preto);
-  padding: 0 10px;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--cinzagelo);
+    color: var(--preto);
+    padding: 0 10px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .accordion-total input:checked ~ .accordion-texto {
   max-height: 200px;
   padding: 10px;
+
 }
 
 footer {

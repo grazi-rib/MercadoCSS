@@ -3,41 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bebidas.css">
     <link rel="stylesheet" href="../assets/fontawesome-free-7.0.0-web/css/all.css">
     <title>MercadoCSS</title>
 </head>
 <body>
-    <header>
-        <img src="../assets/Untitled.png" alt="logo" class="logo">
-        <div class="menu-container">
-            <a href="about-us.html">Sobre nós</a>
-            <a href="checkout.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-            <a href="login.html">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
-    </header>
+    <input type="checkbox" id="modo-escuro">
+    <div class="paginacomp">
+        <header>
+            <div class="iconeemodoescuro">
+                <img src="../assets/Untitled.png" alt="logo" class="logo">
+                <label for="modo-escuro" class="troca-tema">Alternar Tema</label>
+            </div>
+            <div class="menu-container">
+                <a href="about-us.html">Sobre nós</a>
+                <a href="checkout.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </header>
     <nav>
         <a href="home.html">Inicio</a>
         <a href="limpeza.html">Limpeza</a>
-        <a href="bebidas.html">Bebidas</a>
+        <a href="bebidas.html" style="font-weight: bold;">Bebidas</a>
         <a href="carnes.html">Carnes</a>
         <a href="hortifruti.html">Hortifruti</a>
         <a href="frios.html">Frios</a>
         <a href="padaria.html">Padaria</a>
     </nav>
     <main>
-        <section class="produtos">
-            <div class= "card">
-                <img src="../assets/Heineken.png" alt="Heineken">
+        <h1>Bebidas</h1>
+        <section class="produtos-container">
+            <div class="produto">
+                <img src="../assets/heineken.png" alt="Cerveja Heineken 330ml(Long Neck)" class="imagem">
+                <p class="descricao">Cerveja Heineken 330ml(Long Neck)</p>
+                <p class="preco">R$ 5,99</p>
+                <button class="botao">ADICIONAR</button>
             </div>
-            <div class="card">
-                <img src="../assets/Jack .png" alt="Jack">
+            <div class="produto">
+                <img src="https://nossadistribuidorabebidas.com.br/wp-content/uploads/2016/03/Whisky-Jack-Daniels-Fire.png" alt="Whisky Jack Daniels Fire 1L" class="imagem">
+                <p class="descricao">Whisky Jack Daniels Fire 1L</p>
+                <p class="preco">R$ 135,00</p>
+                <button class="botao">ADICIONAR</button>
+            </div>
+            <div class="produto">
+                <img src="../assets/51.png" alt="Cachaça Tradicional 51 Garrafa 965ml" class="imagem">
+                <p class="descricao">Cachaça Tradicional 51 Garrafa 965ml</p>
+                <p class="preco">R$ 15,00</p>
+                <button class="botao">ADICIONAR</button>
+            </div>
+            <div class="produto">
+                <img src="../assets/coca.png" alt="Coca-Cola Lata" class="imagem">
+                <p class="descricao">Refrigerante Coca-Cola Lata 350ml</p>
+                <p class="preco">R$ 3,80</p>
+                <button class="botao">ADICIONAR</button>
+            </div>
+            <div class="produto">
+                <img src="../assets/johnniew.png" alt="Johnnie Walker - Whisky Blue Label 1l" class="imagem">
+                <p class="descricao">Johnnie Walker - Whisky Blue Label 1l</p>
+                <p class="preco">R$ 1.200,00</p>
+                <button class="botao">ADICIONAR</button>
+            </div>
+            <div class="produto">
+                <img src="../assets/jager.png" alt="Jagermeister Original 700ml" class="imagem">
+                <p class="descricao">Jagermeister Original 700ml</p>
+                <p class="preco">R$ 140,00</p>
+                <button class="botao">ADICIONAR</button>
+            </div>
+            <div class="produto">
+                <img src="../assets/gatorade.png" alt="Isotônico Gatorade Laranja 500ml" class="imagem">
+                <p class="descricao">Isotônico Gatorade Laranja 500ml</p>
+                <p class="preco">R$ 4,50</p>
+                <button class="botao">ADICIONAR</button>
+            </div>
+            <div class="produto">
+                <img src="../assets/redbull.png" alt="Energético Red Bull Energy Drink 250ml" class="imagem">
+                <p class="descricao">Energético Red Bull Energy Drink 250ml</p>
+                <p class="preco">R$ 10,00</p>
+                <button class="botao">ADICIONAR</button>
+            </div>
+            <div class="produto">
+                <img src="https://giassi.vtexassets.com/arquivos/ids/9060667/Agua-Mineral-Natural-com-Gas-Crystal-Garrafa-500ml.png?v=638802484170930000" alt="Água Mineral com Gás 500ml" class="imagem">
+                <p class="descricao">Água Mineral com Gás 500ml</p>
+                <p class="preco">R$ 1,79</p>
+                <button class="botao">ADICIONAR</button>   
+            </div>
+            <div class="produto">
+                <img src="../assets/fanta.png" alt="Refrigerante Fanta Uva Pet 2 Litros" class="imagem">
+                <p class="descricao">Refrigerante Fanta Uva Pet 2 Litros</p>
+                <p class="preco">R$ 9,00</p>
+                <button class="botao">ADICIONAR</button> 
+            <a href="contato.html" class="botao-whats">
+                <img src="../assets/whatsapp.png" alt="Logotipo do whatsapp" class="botao-whats-img">
+            </a> 
+            </div>    
+        </section>
+        <section class="faq">
+            <h2>Perguntas Frequentes</h2>
+            <div class="accordion-total">
+                <input type="checkbox" id="item1">
+                <label for="item1">O que é a CSS?</label>
+                <div class="accordion-texto">
+                <p>
+                    Na Corporativa Superfácil Supermercado (CSS), nossa prioridade é tornar suas compras rápidas, práticas e confiáveis. Estamos aqui para simplificar o seu dia a dia, garantindo que você encontre tudo que precisa com qualidade e eficiência.
+                </p>
+                </div>
+            </div>
+
+            <div class="accordion-total">
+                <input type="checkbox" id="item2">
+                <label for="item2">Como faço pedidos?</label>
+                <div class="accordion-texto">
+                <p>
+                    Você pode selecionar produtos, fazer o pagamento e receber os produtos no conforto de seu lar!
+                </p>
+                </div>
             </div>
         </section>
+    </main>
+    <footer>
+      <div class="final">
+        <p>&copy; 2025 Corporativa Superfácil Supermercados (CSS). Todos os direitos reservados.</p>
+      </div>
+    </footer>
     </main>
 </body>
 </html>
