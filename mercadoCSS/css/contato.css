@@ -3,7 +3,7 @@
     --cinzagelo: #F5F5F5;
     --preto: #000000;
     --cinzaescuro: #A6AEA8;
-    --temapagina: #05BE20;
+    --temapagina: #1d862d;
     --hovernav: #393838;
 }
 
@@ -12,100 +12,10 @@
     --cinzagelo: #1E1E1E;
     --preto: #E5E5E5;
     --cinzaescuro: #B0B0B0;
-    --temapagina: #2FA63A;
+    --temapagina: #1d862d;
     --hovernav: #333333;
-}
+}   
 
-@media (max-width: 768px) {
-    .img-texto1 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .img-texto2 {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .texto {
-        text-align: justify;
-    }
-
-    header { 
-        flex-wrap: wrap;
-        gap: 10px;
-        height: 55px;
-        position: relative;
-    }
-
-    .logo {
-        height: 30px;
-    }
-    
-
-    .menu-container {
-        flex-direction: row;
-        align-items: center;
-        margin-top: 10px;  
-        display: flex;
-        gap: 10px;
-        margin-left: auto;
-    }
-
-    .menu-container > a {
-        margin-left: 0;
-        font-size: 18px;
-        color: var(--preto);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-    }
-
-    .iconeemodoescuro{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-right: auto;
-    }
-
-    nav {
-        flex-direction: column;
-        padding: 20px 10px; 
-        gap: 15px; 
-        align-items: center;
-    }
-
-    nav a {
-        width: auto; 
-        text-align: center;
-        font-size: 16px;
-        padding: 10px 0;
-    }
-
-    .botao-whats {
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .botao-whats-img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .troca-tema {
-        padding: 5px 10px;
-        font-size: 12px;
-        margin-left: 10px;
-        margin-right: auto;
-    }
-
-    footer.final {
-        text-align: center;
-        gap: 10px;
-        padding: 10px;
-    }
-
-}
 
 body{
     font-family: Arial, sans-serif;
@@ -119,6 +29,7 @@ html, body {
 
 .paginacomp {
     background-color: var(--cinzagelo);
+    min-height: 100vh;
 }
 
 header{
@@ -127,7 +38,7 @@ header{
     display: flex;
     align-items: center;
     box-shadow: 0 2px 4px var(--preto);
-    height: 35px;
+    height: auto; 
     justify-content: space-between;
 }
 
@@ -142,7 +53,7 @@ header{
 }
 
 .menu-container  > a{
-    font-size: 18px;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
     color: var(--preto);
     font-weight: bold;
     margin-left: 20px;
@@ -150,7 +61,7 @@ header{
 }
 
 .menu-container  > a:hover{
-    color: var(--hovernav);
+    color: var(--cinzaescuro);
 }
 
 nav{
@@ -160,29 +71,14 @@ nav{
     justify-content: space-between;
     display: flex;
     gap: 15px;
-}
-
-.duvidas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    color: var(--preto);
-    font-size: 18px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.duvidas-whats-img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 nav a{
     color: var(--preto);
     text-decoration: none;
-    font-size: 18px;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
 }
 
 nav a:hover{
@@ -191,6 +87,34 @@ nav a:hover{
 
 nav a:active{
     font-weight: bold;
+}
+
+.duvidas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--preto);
+    font-size: 18px;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--preto);
+}
+
+.duvidas h1 {
+    display: flex;            
+    align-items: center;      
+    justify-content: center;  
+    gap: 10px;                
+    text-align: center;       
+    font-size: 1.5rem;   
+}
+
+.duvidas-whats-img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    order: -1; 
 }
 
 .botao-whats-img {
@@ -218,16 +142,6 @@ nav a:active{
     display: none;
 }
 
-
-.duvidas{
-    color: var(--preto);
-    font-size: 18px;
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-}
-
 .contato-form{
     display: flex;
     flex-direction: column;
@@ -236,6 +150,7 @@ nav a:active{
     justify-content: center;
     text-align: center;
     width: 100%;
+    color: var(--preto);
     
 }
 
@@ -248,6 +163,9 @@ nav a:active{
     font-size: 16px;
     box-sizing: border-box;
     transition: border 0.3s;
+    margin-bottom: 20px;
+    background-color: var(--cinzaescuro);
+    color: var(--preto);
 }
 
 .contato-form input:focus,
@@ -260,6 +178,8 @@ nav a:active{
     align-self: flex-start;
     margin-bottom: 5px;
     font-weight: bold;
+    display: block;
+    margin-bottom: 5px; 
 }
 
 .contato-container button {
@@ -268,7 +188,7 @@ nav a:active{
     font-weight: bold;
     padding: 12px 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px var(--preto);
+    box-shadow: 0 2px 4px var(--preto);
 }
 
 .contato-container button:hover {
@@ -289,7 +209,6 @@ nav a:active{
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
-    margin-top: 40px;
 }
 
 .contato-container{
@@ -301,7 +220,7 @@ nav a:active{
     padding: 20px;
     background-color: var(--branco); 
     border-radius: 10px;
-    box-shadow: 0 4px 10px var(--preto);
+    box-shadow: 0 2px 5px var(--preto);
     margin: 0 auto;
     gap: 15px;
     max-width: 500px;
@@ -320,19 +239,270 @@ nav a:active{
     margin: 10px;
 }
 
+.faq {
+  font-family: 'Arial', sans-serif; 
+  font-size: clamp(1rem, 3vw, 1.2rem);              
+  color: var(--temapagina);        
+  text-align: center;              
+  margin: 20px 0 10px 0;                   
+  padding-bottom: 15px;
+}
+
+.accordion-total input {
+  display: none;
+}
+
+.accordion-total label {
+  display: block;
+  background-color: var(--temapagina);
+  color: var(--preto);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.accordion-texto {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: var(--cinzagelo);
+  color: var(--preto);
+  padding: 0 10px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.accordion-total input:checked ~ .accordion-texto {
+  max-height: 200px;
+  padding: 10px;
+}
+
 footer {
-    padding: 10px ;
+    background-color: var(--cinzaescuro);
+    color: var(--preto);
+    padding: 10px 0;
     text-align: center;
-    font-size: 14px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .final {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--cinzaescuro);
-    padding: 10px 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+
+    header { 
+        gap: 10px;
+        height: 55px;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .menu-container {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;  
+        display: flex;
+        margin-left: auto;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .menu-container > a {
+        margin-left: 0;
+        color: var(--preto);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .iconeemodoescuro{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 10px; 
+        gap: 10px; 
+        align-items: center;
+    }
+
+    nav a {
+        width: auto; 
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .troca-tema {
+        padding: 5px 8px;
+    }
+
+    .botao-whats-img {
+        width: 45px;
+        height: auto;
+    }
+
+    .duvidas {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .duvidas h1 {
+        font-size: 1.2rem;
+    }
+
+    .contato-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    footer .final {
     text-align: center;
-    font-size: 14px;
+    gap: 10px;
+    padding: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    header { 
+        padding: 5px 5px;
+        gap: 5px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .menu-container {
+        gap: 5px;
+    }
+
+    .troca-tema {
+        padding: 3px 6px;
+    }
+
+    .botao-whats-img {
+        width: 40px;
+    }
+
+    .duvidas {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .duvidas h1 {
+        font-size: 1rem;
+    }
+
+    .contato-container {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+}
+
+@media print {
+    body, .paginacomp {
+        background-color: var(--branco);
+        color: var(--preto);
+    }
+
+    nav, .menu-container, .botao-whats-img, .troca-tema {
+        display: none !important;
+    }
+
+    .conteiner, .contato-container, .duvidas {
+        background-color: var(--branco);
+        color: var(--preto);
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .contato-form input,
+    .contato-form textarea,
+    .contato-form label,
+    .contato-container button {
+        background-color: var(--branco);
+        color: var(--preto);
+        border: 1px solid var(--cinzaescuro);
+        box-shadow: none;
+        padding: 5px;
+        font-size: 12pt;
+    }
+
+    h1, h2 {
+        color: var(--preto);
+    }
+
+    .accordion-texto {
+        max-height: none !important;
+        padding: 10px !important;
+        display: block !important;
+        color: var(--preto);
+        background-color: var(--branco);
+    }
+
+    .accordion-total label::after {
+        content: "";
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: var(--cinzaescuro);
+    }
+
+    .contato-container {
+        page-break-inside: avoid;
+    }
+
+    footer {
+        background: var(--branco);
+        color: var(--preto);
+        box-shadow: none;
+        padding: 5px 0;
+        font-size: 10pt;
+        text-align: center;
+    }
 }
