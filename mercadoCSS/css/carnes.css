@@ -94,7 +94,6 @@
   }
 
   nav {
-    flex-direction: column;
     padding: 10px; 
     gap: 10px; 
     align-items: center;
@@ -205,15 +204,6 @@ body{
 .paginacomp {
     background-color: var(--cinzagelo);
     min-height: 100vh;
-}
-
-.produtos-container {
-    display: flex;
-    flex-wrap: wrap;      
-    gap: 20px;           
-    justify-content: center;
-    padding: 20px 60px 60px 60px;
-    background-color: var(--cinzagelo);
 }
 
 header{

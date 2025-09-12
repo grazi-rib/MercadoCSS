@@ -1,7 +1,7 @@
 :root {
-    --branco: #f1f1f1;
+    --branco: #ffffff;
     --cinza: #A6AEA8;
-    --preto: #000000;
+    --preto: #211f1f;
     --cinzaesc: #393838;
     --marrom: #987132;
     --cinzaclaro: #989696;
@@ -13,25 +13,23 @@
 }
 
 #modo-escuro:checked~.paginacomp {
-    --branco: #000000;
+    --branco: #211f1f;
     --cinzaclaro: #1E1E1E;
-    --preto: #E5E5E5;
+    --preto: #ffffff;
     --cinzaescuro: #B0B0B0;
     --temapagina: #BD8F44;
     --hovernav: #393838;
-    --off: #121212;
+    --off: #343232;
 }
 
 .paginacomp {
-    background-color: var(--branco);
+    background-color: var(--off);
     transition: background-color 0.3s ease;
 }
 
 #modo-escuro:checked~.paginacomp {
-    background-color: #000000;
+    background-color:var(--off);
 }
-
-
 
 body {
     font-family: Arial, sans-serif;
@@ -45,12 +43,13 @@ header {
     display: flex;
     align-items: center;
     box-shadow: 0 2px 4px var(--preto);
-    height: 35px;
+    height: auto;
     justify-content: space-between;
 }
 
 .logo {
     height: 50px;
+    transform: translateY(5px);
 }
 
 .menu-container {
@@ -132,12 +131,12 @@ h1::after {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--branco);
     padding: 15px;
     border-radius: 8px;
+    max-width: 200px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    justify-content: center;
 }
 
 .card:hover {
@@ -154,6 +153,7 @@ h1::after {
     font-size: 16px;
     margin: 10px 0;
     height: 40px;
+    color: var(--preto);
 }
 
 .preco {
@@ -194,15 +194,16 @@ h1::after {
 
 .troca-tema {
     padding: 5px 10px;
-    font-size: 12px;
-    position: static;
+    position: relative;
+    bottom: 15px;
+    left: 10px;
     margin: 0 auto 20px 10px;
     cursor: pointer;
     background-color: var(--temapagina);
     color: var(--preto);
     padding: 6px 12px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
 #modo-escuro {
@@ -289,7 +290,8 @@ footer {
     header {
         gap: 10px;
         position: relative;
-        align-items: center;
+        align-items: top;
+
     }
 
     .logo {
@@ -322,6 +324,15 @@ footer {
         margin-right: auto;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .troca-tema{
+        position: static;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        transform: translateY(0);
+        padding: 5px 8px;
     }
 
     nav a {
@@ -367,7 +378,7 @@ footer {
 
 @media (max-width: 425px) {
     header {
-        padding: 5px 10px;
+        padding: 5px 5px 10px 5px;
         gap: 5px;
     }
 
@@ -396,4 +407,38 @@ footer {
         height: 3px;
         margin: 5px auto 0 auto;
     }
+}
+
+@media print {
+  body {
+    background-color: var(--branco);
+    color: var(--preto);
+  }
+  nav, .botao, .botao-whats, .troca-tema, .menu-container {
+    display: none;
+  }
+  .card {
+    page-break-inside: avoid;
+    border: 1px solid var(--cinzaescuro);
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: var(--cinzaescuro);
+  }
+
+  .accordion-texto {
+    max-height: none !important; 
+    padding: 10px !important;
+    display: block !important;
+    color: var(--preto);
+    background: var(--branco);
+  }
+
+  .accordion-total label::after {
+    content: "";
+  }
 }
