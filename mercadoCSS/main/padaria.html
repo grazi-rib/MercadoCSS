@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/padaria.css">
     <link rel="stylesheet" href="../assets/fontawesome-free-7.0.0-web/css/all.css">
     <title>MercadoCSS</title>
@@ -20,10 +19,10 @@
             </div>
             <div class="menu-container">
                 <a href="about-us.html">Sobre nós</a>
-                <a href="checkout.html">
+                <a href="checkout.html" aria-label="Carrinho de compras">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
-                <a href="login.html">
+                <a href="login.html" aria-label="Login do usuário">
                     <i class="fa-solid fa-user"></i>
                 </a>
             </div>
@@ -38,107 +37,117 @@
             <a href="padaria.html" class="padaria">Padaria</a>
             <a href="tabela.html">Cesta Básica</a>
         </nav>
-        <main>
-            <h1>Padaria</h1>
-            <section class="produtos">
-                <div class="card">
-                    <img src="../assets/Pão francês.png" alt="Pão francês">
-                    <h3>Pão francês</h3>
-                    <p class="preco">R$ 12,90/Kg</p>
-                    <button class="btn">ADICIONAR</button>
+        <h1>Padaria</h1>
+        <div class="produto-geral">
+            <div class="produto">
+                <img src="../assets/Pão francês.png" alt="pao francês" class="imagem">
+                <p class="descricao">Pão francês</p>
+                <p class="preco">R$12,90/Kg</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+            <div class="produto">
+                <img src="../assets/Pão De Sanduíche.png" alt="Pao de Sanduíche" class="imagem">
+                <p class="descricao">Pão De Sanduíche Seven Boys Leite 450g</p>
+                <p class="preco">R$8,99</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+            <div class="produto">
+                <img src="../assets/Chineque de creme.png" alt="Chineque" class="imagem">
+                <p class="descricao">Chineque de creme com farofa 80g</p>
+                <p class="preco">R$5,60</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+            <div class="produto">
+                <img src="../assets/Orelha de gato.png" alt="Orelha de gato" class="imagem">
+                <p class="descricao">Orelha de gato</p>
+                <p class="preco">R$35,90/Kg</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+            <div class="produto">
+                <img src="../assets/Sonho sem recheio.png" alt="Sonho" class="imagem">
+                <p class="descricao">Sonho sem recheio</p>
+                <p class="preco">R$29,90/Kg</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+            <div class="produto">
+                <img src="../assets/Rosca.png" alt="Rosca de Polvilho" class="imagem">
+                <p class="descricao">Rosca de Polvilho Salgada AssadaG</p>
+                <p class="preco">R$30,90/Kg</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+            <div class="produto">
+                <img src="../assets/Pão de Queijo.png" alt="Pão de Queijo" class="imagem">
+                <p class="descricao">Pão de Queijo Assado Tradicional</p>
+                <p class="preco">R$42,90/Kg</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+            <div class="produto">
+                <img src="../assets/Pastel.png" alt="Pastel" class="imagem">
+                <p class="descricao">Pastel Recheio Frango com Requeijão</p>
+                <p class="preco">R$7,50</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+            <div class="produto">
+                <img src="../assets/Coxinha.png" alt="Coxinha" class="imagem">
+                <p class="descricao">Coxinha Recheio Frango</p>
+                <p class="preco">R$6,00</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+            <div class="produto">
+                <img src="../assets/Mini Salgados.png" alt="Mini Salgados" class="imagem">
+                <p class="descricao">Mini Salgados Fritos Diversos</p>
+                <p class="preco">R$48,90/Kg</p>
+                <button class="botao">
+                    <p>ADICIONAR</p>
+                </button>
+            </div>
+        </div>
+        <a href="contato.html" class="botao-whats">
+            <img src="../assets/whatsapp.png" alt="Logotipo do Whatsapp Verde" class="botao-whats-img">
+        </a>
+        <section class="faq">
+            <h2>Perguntas Frequentes</h2>
+            <div class="accordion-total">
+                <input type="checkbox" id="item1">
+                <label for="item1">O que é a CSS?</label>
+                <div class="accordion-texto">
+                    <p>
+                        Na Corporativa Superfácil Supermercado (CSS), nossa prioridade é tornar suas compras
+                        rápidas, práticas e confiáveis. Estamos aqui para simplificar o seu dia a dia, garantindo
+                        que você encontre tudo que precisa com qualidade e eficiência.
+                    </p>
                 </div>
+            </div>
 
-                <div class="card">
-                    <img src="../assets/Pão De Sanduíche.png" alt="Pão De Sanduíche">
-                    <h3>Pão De Sanduíche Seven Boys Leite 450g</h3>
-                    <p class="preco">R$ 8,99</p>
-                    <button class="btn">ADICIONAR</button>
+            <div class="accordion-total">
+                <input type="checkbox" id="item2">
+                <label for="item2">Como faço pedidos?</label>
+                <div class="accordion-texto">
+                    <p>
+                        Você pode selecionar produtos, fazer o pagamento e receber os produtos no conforto de seu
+                        lar!
+                    </p>
                 </div>
-
-                <div class="card">
-                    <img src="../assets/Chineque de creme.png" alt="Chineque de creme">
-                    <h3>Chineque de creme com farofa 80g</h3>
-                    <p class="preco">R$ 5,60</p>
-                    <button class="btn">ADICIONAR</button>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/Orelha de gato.png" alt="Orelha de gato">
-                    <h3>Orelha de gato</h3>
-                    <p class="preco">R$ 35,90/Kg</p>
-                    <button class="btn">ADICIONAR</button>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/Sonho sem recheio.png" alt="Sonho sem recheio">
-                    <h3>Sonho sem recheio</h3>
-                    <p class="preco">R$ 27,90/Kg</p>
-                    <button class="btn">ADICIONAR</button>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/Rosca.png" alt="Rosca">
-                    <h3>Rosca de Polvilho Salgada Assada</h3>
-                    <p class="preco">R$ 30,90/Kg</p>
-                    <button class="btn">ADICIONAR</button>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/Pão de Queijo.png" alt="Pão de Queijo">
-                    <h3>Pão de Queijo Assado Tradicional</h3>
-                    <p class="preco">R$ 42,90/Kg</p>
-                    <button class="btn">ADICIONAR</button>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/Pastel.png" alt="Pastel">
-                    <h3>Pastel Recheio Frango com Requeijão</h3>
-                    <p class="preco">R$ 7,90</p>
-                    <button class="btn">ADICIONAR</button>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/Coxinha.png" alt="Coxinha">
-                    <h3>Coxinha Recheio Frango</h3>
-                    <p class="preco">R$ 6,00</p>
-                    <button class="btn">ADICIONAR</button>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/Mini Salgados.png" alt="Mini Salgados">
-                    <h3>Mini Salgados Fritos Diversos</h3>
-                    <p class="preco">R$ 48,90/Kg</p>
-                    <button class="btn">ADICIONAR</button>
-                </div>
-            </section>
-            <a href="contato.html" class="botao-whats">
-                <img src="../assets/whatsapp.png" alt="Logotipo do Whatsapp Verde" class="botao-whats-img">
-            </a>
-            <section class="faq">
-                <h2>Perguntas Frequentes</h2>
-                <div class="accordion-total">
-                    <input type="checkbox" id="item1">
-                    <label for="item1">O que é a CSS?</label>
-                    <div class="accordion-texto">
-                        <p>
-                            Na Corporativa Superfácil Supermercado (CSS), nossa prioridade é tornar suas compras
-                            rápidas, práticas e confiáveis. Estamos aqui para simplificar o seu dia a dia, garantindo
-                            que você encontre tudo que precisa com qualidade e eficiência.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="accordion-total">
-                    <input type="checkbox" id="item2">
-                    <label for="item2">Como faço pedidos?</label>
-                    <div class="accordion-texto">
-                        <p>
-                            Você pode selecionar produtos, fazer o pagamento e receber os produtos no conforto de seu
-                            lar!
-                        </p>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
     </div>
     </main>
     <footer>

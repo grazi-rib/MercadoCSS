@@ -1,5 +1,4 @@
 :root {
-
     --cor-fundo: #f9f9f9;
     --cor-texto: #333333;
     --cor-tema: #ff6600;
@@ -20,7 +19,7 @@
     --cinzaescuro: #A6AEA8;
     --temapagina: #ff6600;
     --hovernav: #393838;
-  
+    --cinza: #A6AEA8;
     --cor-titulo: #333333;
 }
 #modo-escuro:checked ~ .paginacomp {
@@ -45,29 +44,31 @@
     --cinzaescuro: #B0B0B0;
     --temapagina: #bb5410;
     --hovernav: #333333;
-    
+    --cinza: #A6AEA8;
     --cor-titulo: #f1f1f1;
 
 }
 
 header{
-    background-color: var(--cinzaescuro);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 4px var(--preto);
-    height: auto; 
-    justify-content: space-between;
+    background-color: var(--cinza);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px var(--preto);
+  height: auto;
+  justify-content: space-between;
 }
 
 .logo{
     height: 50px;
+    transform: translateY(5px);
 }
 
 .menu-container{
     display: flex;
     align-items: center;
     gap: 20px;
+    color: var(--hovernav);
 }
 
 .menu-container  > a{
@@ -90,7 +91,6 @@ nav{
     display: flex;
     gap: 15px;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 nav a{
@@ -109,19 +109,12 @@ nav a:active{
 
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+    background-color: var(--branco);
+  color: var(--preto);
 }
-.cabecalho {
-    background-color: var(--cor-tema);
-    padding: 15px;
-    text-align: center;
-    color: var(--cor-botao-texto);
-}
-.logo {
-    margin: 0;
-}
+
 .menu-navegacao {
     display: flex;
     justify-content: center;
@@ -199,7 +192,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    box-shadow: 0 2px 5px var(--cor-produto-sombra);
+    border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -223,6 +217,8 @@ body {
     padding: 8px;
     cursor: pointer;
     font-weight: bold;
+    border-radius: 4px;
+  transition: background 0.3s;
 }
 .botao-produto:hover {
     opacity: 0.9;
@@ -231,6 +227,7 @@ body {
     background-color: var(--cor-fundo);
     min-height: 100vh;
     padding-bottom: 0px;
+    transition: background-color 0.3s ease;
 }
 .troca-tema {
     position: static;
@@ -243,7 +240,7 @@ body {
     color: var(--cor-troca-tema-texto);
     padding: 6px 12px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
 .botao-whats {
@@ -366,7 +363,6 @@ footer {
   }
 
   nav {
-    flex-direction: column;
     padding: 10px; 
     gap: 10px; 
     align-items: center;
