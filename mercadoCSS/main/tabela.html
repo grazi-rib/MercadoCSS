@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../css/tabela.css">
     <link rel="stylesheet" href="../assets/fontawesome-free-7.0.0-web/css/all.css">
     <title>MercadoCSS</title>
 </head>
@@ -33,35 +34,82 @@
             <a href="hortifruti.html">Hortifruti</a>
             <a href="frios.html">Frios</a>
             <a href="padaria.html">Padaria</a>
-            <a href="tabela.html">Cesta Básica</a>
+            <a href="tabela.html" class="cesta">Cesta Básica</a>
         </nav>
-<div class="conteiner">
-    <div class="duvidas">
-         <img src="../assets/whatsapp.png" alt="Logotipo do Whatsapp Verde" class="botao-whats-img">
-        <h1>Dúvidas? Preencha o formulário que nossos atendentes entrarão em contato:</h1>
-    </div>
-        <div class="contato-container">
-            <main>
-                <h1>Contato</h1>
-                <form action="#" method="post" class="contato-form">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Ex.: Fulano da Silva Jr." required>
+<main>
+  <h1>Cestas Básicas</h1>
+  <table class="tabela-total">
+  <tr>
+    <th>Tamanho da Cesta</th>
+    <th>Quantidade de Itens</th>
+    <th>Valor Total</th>
+  </tr>
 
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" id="telefone" name="telefone" placeholder="Ex.: (XX) XXXXX-XXXX" required>
+  <tr>
+    <td>Solteiro</td>
+    <td>
+      <ul>
+        <li>Presunto Fatiado Seara 200g</li>
+        <li>Queijo Mussarela 500g</li>
+        <li>2 Iogurtes Gregos Nestlé</li>
+        <li>Leite Itambé 1L</li>
+        <li>Nata Frimesa 200g</li>
+        <li>Limpador Veja X14</li>
+        <li>Sabão em Pó OMO 800g</li>
+        <li>Contra Filé Bovina 1Kg</li>
+      </ul>
+    </td>
+    <td>R$ 155,26</td>
+  </tr>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Ex.: teste@teste.com.br" required>
+  <tr>
+    <td>Casal</td>
+    <td>
+      <ul>
+        <li>Queijo Mussarela 500g</li>
+        <li>Presunto Fatiado 200g</li>
+        <li>Requeijão Vigor 200g</li>
+        <li>4 Iogurtes Gregos</li>
+        <li>2 Leites Itambé 1L</li>
+        <li>Leite Fermentado Yakult</li>
+        <li>Limpador Ajax 500ml</li>
+        <li>Água Sanitária Qboa 2L</li>
+        <li>Costela Bovina Ripa 1Kg</li>
+        <li>Picanha Fatiada 1Kg</li>
+        <li>Peito de Frango 1Kg</li>
+      </ul>
+    </td>
+    <td>R$ 218,49</td>
+  </tr>
 
-                    <label for="duvida">Duvida:</label>
-                    <textarea id="duvida" name="duvida" rows="5" required></textarea>
-
-                    <button type="submit">Enviar</button>
-                </form>
-            </main>
-        </div>
-    </div>
-    <section class="faq">
+  <tr>
+    <td>Família</td>
+    <td>
+      <ul>
+        <li>Queijo Mussarela 500g</li>
+        <li>Presunto Fatiado 200g</li>
+        <li>2 Requeijões Vigor 200g</li>
+        <li>6 Iogurtes Gregos</li>
+        <li>2 Leites Itambé 1L</li>
+        <li>Leite Fermentado Yakult</li>
+        <li>Manteiga Piracanjuba 200g</li>
+        <li>Amaciante Downy</li>
+        <li>Sabão em Pó OMO 800g</li>
+        <li>Sabão de Coco 1Kg</li>
+        <li>Água Sanitária Qboa 2L</li>
+        <li>Acém Bovino 1Kg</li>
+        <li>Contra Filé 1Kg</li>
+        <li>Peito de Frango 1Kg</li>
+        <li>Costela Bovina São João 1Kg</li>
+      </ul>
+    </td>
+    <td>R$ 392,92</td>
+  </tr>
+</table>
+<a href="contato.html" class="botao-whats">
+            <img src="../assets/whatsapp.png" alt="Logotipo do Whatsapp Verde" class="botao-whats-img">
+        </a>
+        <section class="faq">
             <h2>Perguntas Frequentes</h2>
             <div class="accordion-total">
                 <input type="checkbox" id="item1">
@@ -82,12 +130,13 @@
                 </p>
                 </div>
             </div>
-    </section>
-<footer>
-    <div class="final">
-        <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="final">
+            <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
+        </div>
+    </footer>
     </div>
-    </div>
-</footer>
 </body>
 </html>

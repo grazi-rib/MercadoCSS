@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MercadoCSS</title>
+
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../assets/fontawesome-free-7.0.0-web/css/all.css" />
+</head>
+<body>
+    <input type="checkbox" id="modo-escuro" />
+
+    <div class="paginacomp">
+        <header>
+            <div class="iconeemodoescuro">
+                <img src="../assets/Untitled.png" alt="Logo MercadoCSS" class="logo" />
+                <label for="modo-escuro" class="troca-tema">Alternar Tema</label>
+            </div>
+
+            <div class="menu-container">
+                <a href="about-us.html">Sobre nós</a>
+                <a href="checkout.html" aria-label="Carrinho de compras">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="login.html" aria-label="Login do usuário">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </header>
+
+        <nav>
+            <a href="home.html">Início</a>
+            <a href="limpeza.html">Limpeza</a>
+            <a href="bebidas.html">Bebidas</a>
+            <a href="carnes.html">Carnes</a>
+            <a href="hortifruti.html">Hortifruti</a>
+            <a href="frios.html">Frios</a>
+            <a href="padaria.html">Padaria</a>
+            <a href="tabela.html">Cesta Básica</a>
+        </nav>
+<main>
+        <div class="geral">
+
+            <section class="pagamento">
+    <h1 class="titulo">Escolha uma forma de pagamento</h1>
+                <p>Bandeiras Aceitas</p>
+                <img src="../assets/cards.png" alt="Bandeiras de Cartões">
+    <div class="formas-container">
+        <input type="radio" name="forma" id="cartao" />
+        <input type="radio" name="forma" id="pix" />
+        <input type="radio" name="forma" id="boleto" />
+
+        <div class="botoes-pagamento">
+            <label for="cartao" class="forma-btn">Cartão de Crédito/Débito</label>
+            <label for="pix" class="forma-btn">PIX</label>
+            <label for="boleto" class="forma-btn">Boleto</label>
+        </div>
+
+        <div class="opcoes">
+            <div class="cartao-opcao">
+                <form class="formspagamento">
+                    <div class="campo-cartao">
+                        <label for="number">Número do Cartão</label>
+                        <input type="text" id="number" placeholder="Ex: XXXX-XXXX-XXXX-XXXX" />
+                    </div>
+                    <div class="campo-cartao">
+                        <label for="expiry">Vencimento</label>
+                        <input type="text" id="expiry" placeholder="Ex: 08/25" />
+                    </div>
+                    <div class="campo-cartao">
+                        <label for="CVV">CVV</label>
+                        <input type="password" maxlength="3" id="CVV" placeholder="Ex: 123" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="mensagem-pix">
+                <p>Chave Pix: mercado@css.com - Encaminhar comprovante via whatsapp: (47) 95561-1245.</p>
+            </div>
+
+            <div class="mensagem-boleto">
+                <p>O boleto será enviado para o seu e-mail. Atenção ao prazo de 24h para compensação.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section class="Info">
+                <h2 class="titulo">Informações do Comprador</h2>
+
+                <form class="formsinfo">
+                    <div>
+                        <label for="firstname">Primeiro Nome</label>
+                        <input type="text" id="firstname" placeholder="Ex: Pablo" />
+                    </div>
+
+                    <div>
+                        <label for="secondname">Segundo Nome</label>
+                        <input type="text" id="secondname" placeholder="Ex: Matheus" />
+                    </div>
+
+                    <div>
+                        <label for="andress">Endereço</label>
+                        <input type="text" id="andress" placeholder="Ex: Rua Emílio Neves" />
+                    </div>
+
+                    <div>
+                        <label for="andressnumber">Número</label>
+                        <input type="text" id="andressnumber" placeholder="Ex: 6954" />
+                    </div>
+
+                    <div>
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" placeholder="Ex: São Paulo" />
+                    </div>
+
+                    <div>
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" placeholder="Ex: São Paulo" />
+                    </div>
+                </form>
+
+                <button class="botao">CONFIRMAR</button>
+            </section>
+        </div>
+
+        <a href="contato.html" class="botao-whats">
+            <img src="../assets/whatsapp.png" alt="Logo do WhatsApp" class="botao-whats-img" />
+        </a>
+        <section class="faq">
+            <h2>Perguntas Frequentes</h2>
+            <div class="accordion-total">
+                <input type="checkbox" id="item1">
+                <label for="item1">O que é a CSS?</label>
+                <div class="accordion-texto">
+                <p>
+                    Na Corporativa Superfácil Supermercado (CSS), nossa prioridade é tornar suas compras rápidas, práticas e confiáveis. Estamos aqui para simplificar o seu dia a dia, garantindo que você encontre tudo que precisa com qualidade e eficiência.
+                </p>
+                </div>
+            </div>
+
+            <div class="accordion-total">
+                <input type="checkbox" id="item2">
+                <label for="item2">Como faço pedidos?</label>
+                <div class="accordion-texto">
+                <p>
+                    Você pode selecionar produtos, fazer o pagamento e receber os produtos no conforto de seu lar!
+                </p>
+                </div>
+            </div>
+        </section>
+</main>
+        <footer>
+            <div class="final">
+                <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

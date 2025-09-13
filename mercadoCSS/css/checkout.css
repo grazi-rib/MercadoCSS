@@ -1,0 +1,845 @@
+/* =========================
+   Variáveis CSS
+   ========================= */
+   :root {
+    --branco: #f1f1f1;
+    --cinzagelo: #F5F5F5;
+    --preto: #000000;
+    --cinzaescuro: #A6AEA8;
+    --temapagina: #b3584d;
+    --hovernav: #393838;
+}
+
+#modo-escuro:checked ~ .paginacomp {
+    --branco: #121212;
+    --cinzagelo: #1E1E1E;
+    --preto: #E5E5E5;
+    --cinzaescuro: #B0B0B0;
+    --temapagina: #b3584d;
+    --hovernav: #333333;
+}
+
+/* =========================
+   Reset e Tipografia
+   ========================= */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cinzagelo);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* =========================
+   Layout geral
+   ========================= */
+
+.paginacomp {
+    background-color: var(--branco);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   Header
+   ========================= */
+
+header{
+    background-color: var(--cinzaescuro);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px var(--preto);
+    height: auto; 
+    justify-content: space-between;
+}
+
+.logo{
+    height: 50px;
+}
+
+/* =========================
+   Menu container (header)
+   ========================= */
+.menu-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-container  > a{
+    font-size: 18px;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    color: var(--preto);
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.menu-container  > a:hover{
+    color: var(--cinzaescuro);
+}
+
+/* =========================
+   Navegação principal (navbar)
+   ========================= */
+
+nav{
+    background-color: var(--temapagina);
+    padding: 10px 50px 10px 50px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+nav a{
+    color: var(--preto);
+    text-decoration: none;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+nav a:active{
+    font-weight: bold;
+}
+
+/* =========================
+   Conteúdo geral (container dos formulários)
+   ========================= */
+.geral {
+    max-width: 1200px;
+    margin: 30px auto 60px;
+    padding: 0 20px;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--branco);
+}
+
+/* =========================
+   Pagamento - container principal
+   ========================= */
+.pagamento {
+    flex: 1 1 400px;
+    max-width: 500px;
+    background-color: var(--cinzagelo);
+    padding: 25px 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--preto);
+    transition: background-color var(--transition-speed);
+}
+
+.pagamento .titulo {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--preto);
+}
+
+.pagamento p {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--preto);
+}
+
+.pagamento img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Container dos ícones de formas de pagamento */
+.botoes-pagamento {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.forma-btn {
+    background-color: var(--cinzagelo);
+    border: 2px solid var(--temapagina);
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--temapagina);
+    text-align: center;
+}
+
+.forma-btn:hover,
+input#cartao:checked ~ label[for="cartao"],
+input#pix:checked ~ label[for="pix"],
+input#boleto:checked ~ label[for="boleto"] {
+    background-color: var(--temapagina);
+    color: var(--branco);
+    box-shadow: 0 4px 12px rgba(236, 75, 54, 0.6);
+}
+
+
+input#cartao:checked ~ label[for="cartao"],
+input#pix:checked ~ label[for="pix"],
+input#boleto:checked ~ label[for="boleto"] {
+    background-color: var(--temapagina);
+    color: var(--branco);
+}
+
+.cartao-opcao,
+.mensagem-pix,
+.mensagem-boleto {
+    display: none;
+}
+
+#cartao:checked ~ .botoes-pagamento + .opcoes > .cartao-opcao {
+    display: block;
+}
+#cartao:checked ~ .botoes-pagamento + .opcoes > .cartao-opcao .formspagamento {
+    display: flex;
+}
+#pix:checked ~ .botoes-pagamento + .opcoes > .mensagem-pix {
+    display: block;
+}
+#boleto:checked ~ .botoes-pagamento + .opcoes > .mensagem-boleto {
+    display: block;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Formulário cartão */
+.formspagamento {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.campo-cartao {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--preto);
+    flex: 1 1 150px;
+}
+
+.campo-cartao label {
+    margin-bottom: 8px;
+}
+
+.campo-cartao input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    border: 1.5px solid #ccc;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+campo-cartao input:focus {
+    border-color: var(--temapagina);
+    box-shadow: 0 0 8px var(--temapagina);
+    outline: none;
+}
+
+/* =========================
+   Informações do Comprador
+   ========================= */
+.Info {
+    flex: 1 1 400px;
+    max-width: 500px;
+    background-color: var(--cinzagelo);
+    padding: 25px 30px;
+    box-shadow: 0 4px 12px var(--preto);
+}
+
+.Info .titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--preto);
+}
+
+.formsinfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px 25px;
+    color: var(--preto);
+}
+
+.formsinfo div {
+    display: flex;
+    flex-direction: column;
+    color: var(--preto);
+}
+
+.formsinfo label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.formsinfo input {
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    border: 1.5px solid var(--cinzagelo);
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+/* =========================
+   Botão Confirmar
+   ========================= */
+.botao {
+    background-color: var(--temapagina);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 30px;
+    margin-top: 30px;
+    padding: 14px 30px;
+    color: var(--branco);
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 180px;
+    text-align: center;
+    align-self: center;
+}
+
+.botao:hover,
+.botao:focus {
+    background-color: var(--temapagina);
+    box-shadow: 0 6px 18px var(--temapagina);
+    outline: none;
+}
+
+/* =========================
+   Botão WhatsApp fixo
+   ========================= */
+.botao-whats {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: transparent;
+    display: block;
+}
+
+.botao-whats-img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.botao-whats:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   Toggle tema escuro
+   ========================= */
+.troca-tema {
+    position: static;
+    margin: 0 20px;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: var(--temapagina);
+    color: var(--preto);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#modo-escuro {
+    display: none;
+}
+/* =========================
+   Accordeon
+   ========================= */
+   .faq {
+    font-family: 'Arial', sans-serif; 
+    font-size: clamp(1rem, 3vw, 1.2rem);              
+    color: var(--temapagina);        
+    text-align: center;                                 
+    padding-bottom: 15px;
+  }
+  
+  .accordion-total input {
+    display: none;
+  }
+  
+  .accordion-total label {
+    display: block;
+    background-color: var(--temapagina);
+    color: var(--preto);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .accordion-texto {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--cinzagelo);
+    color: var(--preto);
+    padding: 0 10px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+  
+  .accordion-total input:checked ~ .accordion-texto {
+    max-height: 200px;
+    padding: 10px;
+  }
+/* =========================
+   Footer
+   ========================= */
+footer {
+    background-color: var(--cinzaescuro);
+    color: var(--preto);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.final {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* =========================
+   Responsividade
+   ========================= */
+@media (max-width: 768px) {
+    .geral {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 10px;
+    }
+
+    .pagamento,
+    .Info {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 15px;
+        align-items: center;
+    }
+
+    nav a {
+        width: auto;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    .botao-whats {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .botao-whats-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .troca-tema {
+        padding: 5px 10px;
+        font-size: 12px;
+        margin-left: 10px;
+        margin-right: auto;
+    }
+
+    footer .final {
+        text-align: center;
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header { 
+      gap: 10px;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+  
+    .logo {
+      height: 30px;
+    }
+
+    .geral {
+        gap: 20px;
+        padding: 0 10px;
+    }
+  
+    .menu-container {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 10px;  
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+  
+    .menu-container > a {
+      margin-left: 0;
+      color: var(--preto);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+  
+    .iconeemodoescuro{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: auto;
+      justify-content: center;
+    }
+  
+    nav {
+      flex-direction: column;
+      padding: 10px; 
+      gap: 10px; 
+      align-items: center;
+    }
+  
+    nav a {
+      width: auto; 
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .produtos-container {
+      padding: 10px;
+      gap: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .produto {
+      flex: 1 1 150px;
+      max-width: 200px;
+      margin-bottom: 15px;
+    }
+  
+    h1 {         
+      margin: 20px 0 15px 0;
+      letter-spacing: 1.5px;
+      padding-bottom: 12px;
+    }
+  
+    h1::after {
+      width: 40px;              
+      height: 3px;
+      margin: 6px auto 0 auto;
+    }
+  
+    .imagem {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .botao-whats-img {
+      max-width: 50px;
+      height: auto;
+      width: 50px; 
+    }
+  
+    .troca-tema {
+      padding: 5px 10px;
+    }
+  
+    footer .final {
+      text-align: center;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .formspagamento {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .campo-cartao {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    .formsinfo {
+        grid-template-columns: 1fr;
+        gap: 15px 0;
+    }
+
+    .pagamento img {
+    max-width: 100%;
+    height: auto;
+    }
+
+    .pagamento,
+    .Info {
+        flex: 1 1 100% !important; 
+        max-width: 100% !important; 
+        padding: 15px 20px; 
+        box-sizing: border-box; 
+    }
+
+    .geral {
+        gap: 20px;
+        padding: 0 10px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    header {
+      padding: 5px 10px;
+      gap: 5px;
+    }
+  
+    .logo {
+      height: 30px;
+    }
+  
+    .troca-tema {
+      padding: 3px 6px;
+    }
+  
+    .menu-container {
+      gap: 5px;     
+    }
+
+    .forma-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        box-sizing: border-box;
+        flex: 1 1 100%;    
+        max-width: 100%;
+    }
+  
+    .botao-whats-img {
+      width: 45px;   
+      height: auto; 
+      max-height: 50px;
+    }
+  
+    h1 {     
+      margin: 15px 0 10px 0;
+      letter-spacing: 1px;
+      padding-bottom: 10px;
+    }
+  
+    h1::after {
+      width: 30px;
+      height: 3px;
+      margin: 5px auto 0 auto;
+    }
+
+    .formspagamento {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .campo-cartao {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    .campo-cartao input,
+    .formsinfo input {
+    font-size: 14px;
+    padding: 8px;
+    }
+
+    .formsinfo {
+        grid-template-columns: 1fr;
+        gap: 12px 0;
+    }
+
+    .pagamento,
+    .Info {
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        padding: 12px !important;
+        margin: 0 auto;
+    }
+
+    .botoes-pagamento {
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;   
+    }
+
+    .geral {
+        gap: 15px;
+        padding: 0 8px !important;
+    }
+
+    html, body {
+        overflow-x: hidden !important;
+    }
+
+}
+
+@media print {
+  body {
+    background-color: var(--branco);
+    color: var(--preto);
+    font-family: Arial, sans-serif;
+  }
+  .botao-produto,
+  .botao-whats,
+  .menu-container,
+  .troca-tema,
+  nav {
+    display: none;
+  }
+
+  /* =========================
+     Container geral
+     ========================= */
+  .geral {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* =========================
+     Seções Pagamento e Info
+     ========================= */
+  .pagamento,
+  .Info {
+    display: block;
+    max-width: 100% !important;
+    padding: 15px !important;
+    margin: 0 0 15px 0;
+    border: 1px solid var(--cinzaescuro);
+    background-color: var(--branco) !important;
+    color: var(--preto) !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  /* Títulos */
+  .titulo {
+    font-size: 18pt !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--preto) !important;
+  }
+
+  /* =========================
+     Formulários
+     ========================= */
+  .formsinfo,
+  .formspagamento {
+    display: block;
+    width: 100%;
+    gap: 0;
+  }
+
+  .formsinfo div,
+  .campo-cartao {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .formsinfo label,
+  .campo-cartao label {
+    font-weight: bold;
+    color: var(--preto) !important;
+  }
+
+  .formsinfo input,
+  .campo-cartao input {
+    width: 100%;
+    border: 1px solid var(--cinzaescuro);
+    background-color: var(--branco) !important;
+    color: var(--preto) !important;
+    padding: 6px 8px;
+    font-size: 12pt;
+  }
+
+  .accordion-texto {
+    max-height: none !important; 
+    padding: 10px !important;
+    display: block !important;
+    color: var(--preto);
+    background: var(--branco);
+  }
+
+  .accordion-total label::after {
+    content: "";
+  }
+
+  footer {
+    border-top: 1px solid var(--cor-borda);
+    padding: 10px;
+    font-size: 10pt;
+    background: var(--cor-card) !important;
+    color: var(--cor-texto) !important;
+  }
+
+  /* =========================
+     Imagens
+     ========================= */
+  .pagamento img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
+  /* =========================
+     Quebras de página
+     ========================= */
+  .pagamento,
+  .Info,
+  .accordion-total {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
+
