@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../assets/fontawesome-free-7.0.0-web/css/all.css">
     <title>MercadoCSS</title>
 </head>
+
 <body>
     <input type="checkbox" id="modo-escuro">
     <div class="paginacomp">
@@ -35,100 +37,126 @@
             <a href="padaria.html">Padaria</a>
             <a href="tabela.html">Cesta Básica</a>
         </nav>
-    <main>
-        <h1>Frios</h1> 
-        <div class="produtos-container">
-            <div class="produto">
-                <img src="../assets/queijo.png" alt="foto de um queijo numa embalagem azul" class="imagem">
-                <p class="descricao">Queijo Crioulo Mussarela Embalado 150g</p>
-                <p class="preco">R$17,50</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-            <div class="produto">
-                <img src="../assets/Presunto-Fatiado.png" alt="foto de um presunto fatiado numa embalagem amarela" class="imagem">
-                <p class="descricao">Presunto Fatiado Pif Paf 150G</p>
-                <p class="preco">R$ 12,99</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-            <div class="produto">
-                <img src="../assets/iogurte.png" alt="foto de um iogurte grego de morango" class="imagem">
-                <p class="descricao">Iogurte Grego Batavo Pedaços de Morango Pote 450g</p>
-                <p class="preco">R$ 10,49</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-            <div class="produto">
-                <img src="../assets/patefrango.png" alt="foto de uma embalagem de patê de frango" class="imagem">
-                <p class="descricao">Patê De Frango 500g Cellier</p>
-                <p class="preco">R$ 32,99</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-            <div class="produto">
-                <img src="../assets/danoninho.png" alt="foto de uam embalagem de danoninho" class="imagem">
-                <p class="descricao">Iogurte Integral Danoninho Bom Dia Morango c/ Aveia Pote 90g</p>
-                <p class="preco">R$ 2,50</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-            <div class="produto">
-                <img src="../assets/leite-integral-saquinho--pasteurizado.png" alt="foto de uma embalagem de leite" class="imagem">
-                <p class="descricao">Leite Pasteurizado Integral Saquinho 1L Itambé</p>
-                <p class="preco">R$ 6,49</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-            <div class="produto">
-                <img src="../assets/nata.png" alt="foto de uma embalagem de nata" class="imagem">
-                <p class="descricao">Nata Frimesa Pote 500g</p>
-                <p class="preco">R$ 9,99</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-            <div class="produto">
-                <img src="../assets/yakult.png" alt="foto de uma embalagem de yakult unitária" class="imagem">
-                <p class="descricao">Leite Fermentado Yakult 80g</p>
-                <p class="preco">R$ 3,55</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-            <div class="produto">
-                <img src="../assets/requeijao.png" alt="foto de uma embalagem de requeijão" class="imagem">
-                <p class="descricao">Requeijão Cremoso Vigor Light 200g</p>
-                <p class="preco">R$ 6,99</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-            <div class="produto">
-                <img src="../assets/manteiga.png" alt="foto de uma embalagem de manteiga" class="imagem">
-                <p class="descricao">Manteiga Primeira Qualidade Itacolomy c/sal Pote 500gr</p>
-                <p class="preco">R$ 25,35</p>
-                <button class="botao">ADICIONAR</button>
-            </div>
-        </div>
-        <a href="contato.html" class="botao-whats">
-            <img src="../assets/whatsapp.png" alt="Logotipo do Whatsapp Verde" class="botao-whats-img">
-        </a>
-        <section class="faq">
-            <h2>Perguntas Frequentes</h2>
-            <div class="accordion-total">
-                <input type="checkbox" id="item1">
-                <label for="item1">O que é a CSS?</label>
-                <div class="accordion-texto">
-                <p>
-                    Na Corporativa Superfácil Supermercado (CSS), nossa prioridade é tornar suas compras rápidas, práticas e confiáveis. Estamos aqui para simplificar o seu dia a dia, garantindo que você encontre tudo que precisa com qualidade e eficiência.
-                </p>
+        <main>
+            <h1>Frios</h1>
+            <div class="produto-geral">
+                <div class="produto">
+                    <img src="../assets/queijo.png" alt="foto de um queijo numa embalagem azul" class="imagem">
+                    <p class="descricao">Queijo Crioulo Mussarela Embalado 150g</p>
+                    <p class="preco">R$17,50</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/Presunto-Fatiado.png" alt="foto de um presunto fatiado numa embalagem amarela"
+                        class="imagem">
+                    <p class="descricao">Presunto Fatiado Pif Paf 150G</p>
+                    <p class="preco">R$ 12,99</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/iogurte.png" alt="foto de um iogurte grego de morango" class="imagem">
+                    <p class="descricao">Iogurte Grego Batavo Pedaços de Morango Pote 450g</p>
+                    <p class="preco">R$ 10,49</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/patefrango.png" alt="foto de uma embalagem de patê de frango" class="imagem">
+                    <p class="descricao">Patê De Frango 500g Cellier</p>
+                    <p class="preco">R$ 32,99</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/danoninho.png" alt="foto de uam embalagem de danoninho" class="imagem">
+                    <p class="descricao">Iogurte Integral Danoninho Bom Dia Morango c/ Aveia Pote 90g</p>
+                    <p class="preco">R$ 2,50</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/leite-integral-saquinho--pasteurizado.png" alt="foto de uma embalagem de leite"
+                        class="imagem">
+                    <p class="descricao">Leite Pasteurizado Integral Saquinho 1L Itambé</p>
+                    <p class="preco">R$ 6,49</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/nata.png" alt="foto de uma embalagem de nata" class="imagem">
+                    <p class="descricao">Nata Frimesa Pote 500g</p>
+                    <p class="preco">R$ 9,99</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/yakult.png" alt="foto de uma embalagem de yakult unitária" class="imagem">
+                    <p class="descricao">Leite Fermentado Yakult 80g</p>
+                    <p class="preco">R$ 3,55</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/requeijao.png" alt="foto de uma embalagem de requeijão" class="imagem">
+                    <p class="descricao">Requeijão Cremoso Vigor Light 200g</p>
+                    <p class="preco">R$ 6,99</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="../assets/manteiga.png" alt="foto de uma embalagem de manteiga" class="imagem">
+                    <p class="descricao">Manteiga Primeira Qualidade Itacolomy c/sal Pote 500gr</p>
+                    <p class="preco">R$ 25,35</p>
+                    <button class="botao">
+                        <p>ADICIONAR</p>
+                    </button>
                 </div>
             </div>
+            <a href="contato.html" class="botao-whats">
+                <img src="../assets/whatsapp.png" alt="Logotipo do Whatsapp Verde" class="botao-whats-img">
+            </a>
+            <section class="faq">
+                <h2>Perguntas Frequentes</h2>
+                <div class="accordion-total">
+                    <input type="checkbox" id="item1">
+                    <label for="item1">O que é a CSS?</label>
+                    <div class="accordion-texto">
+                        <p>
+                            Na Corporativa Superfácil Supermercado (CSS), nossa prioridade é tornar suas compras
+                            rápidas, práticas e confiáveis. Estamos aqui para simplificar o seu dia a dia, garantindo
+                            que você encontre tudo que precisa com qualidade e eficiência.
+                        </p>
+                    </div>
+                </div>
 
-            <div class="accordion-total">
-                <input type="checkbox" id="item2">
-                <label for="item2">Como faço pedidos?</label>
-                <div class="accordion-texto">
-                <p>
-                    Você pode selecionar produtos, fazer o pagamento e receber os produtos no conforto de seu lar!
-                </p>
+                <div class="accordion-total">
+                    <input type="checkbox" id="item2">
+                    <label for="item2">Como faço pedidos?</label>
+                    <div class="accordion-texto">
+                        <p>
+                            Você pode selecionar produtos, fazer o pagamento e receber os produtos no conforto de seu
+                            lar!
+                        </p>
+                    </div>
                 </div>
+            </section>
+        </main>
+        <footer>
+            <div class="final">
+                <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
             </div>
-        </section>
-    </main>
-    <footer>
-        <div class="final">
-            <p>&copy; 2025 Corporativa Superfácil Supermercado (CSS). Todos os direitos reservados.</p>
-        </div>
-    </footer>
+        </footer>
 </body>
+
 </html>
