@@ -235,6 +235,7 @@ header {
 
 .menu-container>a {
   font-size: 18px;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
   color: var(--preto);
   font-weight: bold;
   margin-left: 20px;

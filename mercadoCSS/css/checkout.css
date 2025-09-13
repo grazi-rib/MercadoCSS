@@ -2,21 +2,25 @@
    Variáveis CSS
    ========================= */
    :root {
-    --branco: #f1f1f1;
-    --cinzagelo: #F5F5F5;
-    --preto: #000000;
-    --cinzaescuro: #A6AEA8;
-    --temapagina: #b3584d;
-    --hovernav: #393838;
+    --branco: #ffffff;
+  --cinza: #A6AEA8;
+  --preto: #211f1f;
+  --cinzaesc: #393838;
+  --cinzaclaro: #989696;
+  --off: #f2f0ef;
+  --cinzaescuro: #A6AEA8;
+  --temapagina: #b3584d;
+  --hovernav: #393838;
 }
 
 #modo-escuro:checked ~ .paginacomp {
-    --branco: #121212;
-    --cinzagelo: #1E1E1E;
-    --preto: #E5E5E5;
-    --cinzaescuro: #B0B0B0;
-    --temapagina: #b3584d;
-    --hovernav: #333333;
+    --branco: #211f1f;
+  --cinzaclaro: #1E1E1E;
+  --preto: #ffffff;
+  --cinzaescuro: #B0B0B0;
+  --temapagina: #b3584d;
+  --hovernav: #393838;
+  --off: #343232;
 }
 
 /* =========================
@@ -41,10 +45,8 @@ html, body {
    ========================= */
 
 .paginacomp {
-    background-color: var(--branco);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-color: var(--off);
+  transition: background-color 0.3s ease;
 }
 
 /* =========================
@@ -52,7 +54,7 @@ html, body {
    ========================= */
 
 header{
-    background-color: var(--cinzaescuro);
+    background-color: var(--cinza);
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -61,17 +63,19 @@ header{
     justify-content: space-between;
 }
 
-.logo{
-    height: 50px;
+.logo {
+  height: 50px;
+  transform: translateY(5px);
 }
 
 /* =========================
    Menu container (header)
    ========================= */
-.menu-container{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--hovernav);
 }
 
 .menu-container  > a{
@@ -84,7 +88,7 @@ header{
 }
 
 .menu-container  > a:hover{
-    color: var(--cinzaescuro);
+    color: var(--cinzaesc);
 }
 
 /* =========================
@@ -99,7 +103,6 @@ nav{
     display: flex;
     gap: 15px;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 nav a{
@@ -127,7 +130,7 @@ nav a:active{
     gap: 60px;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: var(--branco);
+    background-color: var(--off);
 }
 
 /* =========================
@@ -136,10 +139,10 @@ nav a:active{
 .pagamento {
     flex: 1 1 400px;
     max-width: 500px;
-    background-color: var(--cinzagelo);
+    background-color: var(--branco);
     padding: 25px 40px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 12px var(--preto);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: background-color var(--transition-speed);
 }
 
@@ -174,6 +177,7 @@ nav a:active{
 .forma-btn {
     background-color: var(--cinzagelo);
     border: 2px solid var(--temapagina);
+    border-radius: 4px;
     padding: 10px 25px;
     cursor: pointer;
     font-weight: bold;
@@ -264,9 +268,10 @@ campo-cartao input:focus {
 .Info {
     flex: 1 1 400px;
     max-width: 500px;
-    background-color: var(--cinzagelo);
+    background-color: var(--off);
     padding: 25px 30px;
-    box-shadow: 0 4px 12px var(--preto);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .Info .titulo {
@@ -297,9 +302,9 @@ campo-cartao input:focus {
 .formsinfo input {
     padding: 10px 12px;
     font-size: 16px;
-    border-radius: var(--border-radius);
+    border-radius: 4px;
     border: 1.5px solid var(--cinzagelo);
-    background-color: var(--branco);
+    background-color: var(--off);
     color: var(--preto);
 }
 
@@ -356,17 +361,17 @@ campo-cartao input:focus {
    Toggle tema escuro
    ========================= */
 .troca-tema {
-    position: static;
-    margin: 0 20px;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-    cursor: pointer;
-    background-color: var(--temapagina);
-    color: var(--preto);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 14px;
+  padding: 5px 10px;
+  position: relative;
+  bottom: 15px;
+  left: 10px;
+  margin: 0 auto 20px 10px;
+  cursor: pointer;
+  background-color: var(--temapagina);
+  color: var(--preto);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
 #modo-escuro {
@@ -455,7 +460,6 @@ footer {
     }
 
     nav {
-        flex-direction: column;
         padding: 20px 10px;
         gap: 15px;
         align-items: center;
@@ -537,7 +541,6 @@ footer {
     }
   
     nav {
-      flex-direction: column;
       padding: 10px; 
       gap: 10px; 
       align-items: center;
