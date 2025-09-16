@@ -183,6 +183,7 @@ nav a:active{
     font-weight: bold;
     color: var(--temapagina);
     text-align: center;
+    align-content: center;
 }
 
 .forma-btn:hover,
@@ -256,7 +257,7 @@ input[type="radio"] {
     color: var(--preto);
 }
 
-campo-cartao input:focus {
+.campo-cartao input:focus {
     border-color: var(--temapagina);
     box-shadow: 0 0 8px var(--temapagina);
     outline: none;
@@ -268,7 +269,7 @@ campo-cartao input:focus {
 .Info {
     flex: 1 1 400px;
     max-width: 500px;
-    background-color: var(--off);
+    background-color: var(--branco);
     padding: 25px 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
