@@ -1,19 +1,23 @@
 :root {
-    --branco: #f1f1f1;
-    --cinzagelo: #F5F5F5;
-    --preto: #000000;
-    --cinzaescuro: #A6AEA8;
-    --temapagina: #800080;
-    --hovernav: #393838;
+  --branco: #ffffff;
+  --cinza: #A6AEA8;
+  --preto: #211f1f;
+  --cinzaesc: #393838;
+  --cinzaclaro: #989696;
+  --off: #f2f0ef;
+  --cinzaescuro: #A6AEA8;
+  --temapagina: #800080;
+  --hovernav: #393838;
 }
 
-#modo-escuro:checked ~ .paginacomp {
-    --branco: #121212;
-    --cinzagelo: #1E1E1E;
-    --preto: #E5E5E5;
-    --cinzaescuro: #B0B0B0;
-    --temapagina: #800080;
-    --hovernav: #333333;
+#modo-escuro:checked~.paginacomp {
+  --branco: #211f1f;
+  --cinzaclaro: #1E1E1E;
+  --preto: #ffffff;
+  --cinzaescuro: #B0B0B0;
+  --temapagina: #800080;
+  --hovernav: #393838;
+  --off: #343232;
 }
 
 #modo-escuro {
@@ -21,34 +25,34 @@
 }
 
 .troca-tema {
-    position: static; 
-    margin: 0 20px;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-    cursor: pointer;
-    background-color: var(--temapagina);
-    color: var(--preto);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
+  padding: 5px 10px;
+  position: relative;
+  bottom: 15px;
+  left: 10px;
+  margin: 0 auto 20px 10px;
+  cursor: pointer;
+  background-color: var(--temapagina);
+  color: var(--preto);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
 body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--cinzagelo);
+    background-color: var(--branco);
     color: var(--preto);
 }
 
 .paginacomp {
-    background-color: var(--cinzagelo);
-    min-height: 100vh;
+  background-color: var(--off);
+  transition: background-color 0.3s ease;
 }
 
 header{
-    background-color: var(--cinzaescuro);
+    background-color: var(--cinza);
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -57,17 +61,20 @@ header{
     justify-content: space-between;
 }
 
-.logo{
-    height: 50px;
+.logo {
+  height: 50px;
+  transform: translateY(5px);
 }
 
-.menu-container{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--hovernav);
 }
 
 .menu-container  > a{
+  font-size: 18px;
     font-size: clamp(0.9rem, 3vw, 1.2rem);
     color: var(--preto);
     font-weight: bold;
@@ -76,7 +83,7 @@ header{
 }
 
 .menu-container  > a:hover{
-    color: var(--cinzaescuro);
+    color: var(--cinzaesc);
 }
 
 nav{
@@ -87,7 +94,6 @@ nav{
     display: flex;
     gap: 15px;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 nav a{
@@ -104,8 +110,6 @@ nav a:active{
     font-weight: bold;
 }
 
-
-
 /*formularioCadastro*/
 
 .form {
@@ -113,18 +117,19 @@ nav a:active{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: var(--cinzagelo);
+  background: var(--off);
 }
 
 .form-secundario {
   width: 340px;
   background-color: var(--branco);
   padding: 25px 20px;
-  border-radius: 10px;
-  border: 1px solid var(--cinzaescuro);
+  border-radius: 8px;
+  border: 1px solid var(--cinzaclaro);
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .form-secundario h3 {
@@ -139,13 +144,17 @@ nav a:active{
   padding: 10px;
   margin: 8px 0;
   border-radius: 6px;
-  border: 1px solid var(--cinzagelo);
+  border: 1px solid var(--off);
 }
 
 .form-secundario button {
   background: var(--temapagina);
   color: var(--branco);
   border: none;
+}
+
+.form-secundario label{
+  color: var(--off);
 }
 
 .form-secundario p,
